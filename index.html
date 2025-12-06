@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Raffle Stats</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>Hourly Raffle Totals</h1>
+  <canvas id="hourlyChart" width="600" height="400"></canvas>
+
+  <script>
+    // Load JSON data (adjust path as needed)
+    fetch('raffles/hourly.json')
+      .then(response => response.json())
+      .then(data => {
+        // Aggregate total counts per timestamp
+        const totals = data.map(snapshot => {
+          const total = snapshot.entries.reduce((sum, e) => sum + parseInt(e.count), 0);
+          return { timestamp: snapshot.timestamp, total };
+        });
+
+        const ctx = document.getElementById('hourlyChart').getContext('2d');
+        const chart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: totals.map(t => t.timestamp),
+            datasets: [{
+              label: 'Hourly Raffle Total',
+              data: totals.map(t => t.total),
+              borderColor: 'rgba(75, 192, 192, 1)',
+              fill: false
+            }]
+          },
+          options: {
+            responsive: true,
+            scales: {
+              x: { display: true, title: { display: true, text: 'Timestamp' } },
+              y: { display: true, title: { display: true, text: 'Total Entries' } }
+            }
+          }
+        });
+      });
+  </script>
+</body>
+</html>
