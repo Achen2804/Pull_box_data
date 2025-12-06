@@ -45,7 +45,7 @@ def get_raffle_data(driver, url):
             'value': raffle_value.text})
     raffles = {k: v for k, v in raffles.items() if v}
     for rtype, data in raffles.items():
-        with open(f"{rtype}.json", "w") as f:
+        with open(f"raffles/{rtype}.json", "w") as f:
             json.dump(data, f, indent=2)
     return raffles
 
