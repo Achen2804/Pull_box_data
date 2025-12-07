@@ -8,6 +8,8 @@ on:
 jobs:
   collect:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
 
@@ -33,4 +35,4 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "Update from github actions"
-            git push origin
+            git push origin ${{github.ref_name}}
