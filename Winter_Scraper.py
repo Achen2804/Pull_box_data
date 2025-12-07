@@ -3,7 +3,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 import re
 import json
-
+from datetime import datetime
 def initialize_driver(headless=True):
     options = Options()
     if headless:
@@ -25,6 +25,9 @@ def get_raffle_data(driver, url):
     raffle_container = driver.find_elements(By.CSS_SELECTOR, '.p-6.bg-card.rounded-lg.border-2.border-border.hover\:border-primary\/50.transition-colors')
     raffle_types = ["hourly", "12hour", "24hour"]
     raffles = {rtype: [] for rtype in raffle_types}
+    now = datetime.now()
+
+    current_hour = now.strftime("%H") 
     for i, item in enumerate(raffle_container):
         if i >= len(raffle_types):
             break
@@ -42,7 +45,8 @@ def get_raffle_data(driver, url):
         raffles[raffle_type].append({
             'entry': raffle_entries.text,
             'item': raffle_items.text,
-            'value': raffle_value.text})
+            'value': raffle_value.text,
+            time:current_hour })
     raffles = {k: v for k, v in raffles.items() if v}
     for rtype, data in raffles.items():
         with open(f"raffles/{rtype}.json", "w") as f:
