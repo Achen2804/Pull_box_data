@@ -4,6 +4,7 @@ on:
   schedule:
     # Every hour at minute 55
     - cron: '55 * * * *'
+  workflow_dispatch:
 
 jobs:
   collect:
