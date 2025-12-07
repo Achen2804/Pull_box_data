@@ -46,7 +46,7 @@ def get_raffle_data(driver, url):
             'entry': raffle_entries.text,
             'item': raffle_items.text,
             'value': raffle_value.text,
-            time:current_hour })
+            'hour':current_hour })
     raffles = {k: v for k, v in raffles.items() if v}
     for rtype, data in raffles.items():
         with open(f"raffles/{rtype}.json", "w") as f:
