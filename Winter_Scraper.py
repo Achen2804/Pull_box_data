@@ -61,7 +61,8 @@ def get_raffle_data(driver, url):
                     items = []
         else:
             items = []        
-        items.append(data) 
+        for entry in data:
+            items.append(entry) 
         with open(path, "w") as f:
             json.dump(items, f, indent=2)
     return raffles
