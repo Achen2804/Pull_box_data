@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 import re
 import json
 from datetime import datetime
+import os
 def initialize_driver(headless=True):
     options = Options()
     if headless:
@@ -46,12 +47,24 @@ def get_raffle_data(driver, url):
             'entry': raffle_entries.text,
             'item': raffle_items.text,
             'value': raffle_value.text,
-            time:current_hour })
+            'hour':current_hour })
     raffles = {k: v for k, v in raffles.items() if v}
     for rtype, data in raffles.items():
-        with open(f"raffles/{rtype}.json", "w") as f:
-            json.dump(data, f, indent=2)
+        path = f"raffles/{rtype}.json"
+        if os.path.exists(path):
+            with open(path, "r") as f:
+                try:
+                    items = json.load(f)
+                    if not isinstance(items, list):
+                        items = []  
+                except json.JSONDecodeError:
+                    items = []
+        else:
+            items = []        
+        for entry in data:
+            items.append(entry) 
+        with open(path, "w") as f:
+            json.dump(items, f, indent=2)
     return raffles
-
 data = get_raffle_data(initialize_driver(), 'https://www.pullbox.gg/limited-event/winter-wonderland/raffle')
 

@@ -20,6 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          git pull origin main --rebase
           python -m pip install --upgrade pip
           pip install -q selenium
 
@@ -30,7 +31,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git pull origin master --rebase 
+           
           git add raffles
           if git diff --cached --quiet; then
             echo "No changes to commit"
