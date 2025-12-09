@@ -7,7 +7,7 @@
 </head>
 <body>
   <h1>Hourly Raffle Totals</h1>
-  <canvas id="hourlyChart" width="600" height="400"></canvas>
+  <canvas id="hourlyChart" width="500" height="200"></canvas>
 
   <script>
     // Load JSON data (adjust path as needed)
@@ -15,32 +15,61 @@
       .then(response => response.json())
       .then(data => {
         // Aggregate total counts per timestamp
-        const totals = data.map(snapshot => {
-          const total = snapshot.entries.reduce((sum, e) => sum + parseInt(e.count), 0);
-          return { timestamp: snapshot.timestamp, total };
-        });
+        const flattenedData = data.flatMap(d => Array.isArray(d) ? d : [d]);
+        const numericData = flattenedData.map(d => ({
+          hour: parseInt(d.hour),
+          entry: parseInt(d.entry.replace(/,/g, ''), 10),
+          value: parseFloat(d.value)
+        }));
+        console.log(numericData);
 
+        aggregatedData = numericData.reduce((acc, curr) => {
+          const existing = acc.find(item => item.hour === curr.hour);
+          if (existing) {
+            existing.entry += curr.entry;
+            existing.value += curr.value;
+          } else {
+            acc.push({ ...curr });
+          }
+          return acc;
+        }, []);
+        console.log(aggregatedData);
+        const labels = aggregatedData.map(d => d.hour);
+        const entryData = aggregatedData.map(d => d.value/d.entry);
         const ctx = document.getElementById('hourlyChart').getContext('2d');
-        const chart = new Chart(ctx, {
+        const hourlyChart = new Chart(ctx, {
           type: 'line',
           data: {
-            labels: totals.map(t => t.timestamp),
+            labels: labels,
             datasets: [{
-              label: 'Hourly Raffle Total',
-              data: totals.map(t => t.total),
+              label: 'Average Value per Entry',
+              data: entryData,
               borderColor: 'rgba(75, 192, 192, 1)',
-              fill: false
+              backgroundColor: 'rgba(75, 192, 192, 0.2)',
+              fill: true,
+              tension: 0.1
             }]
           },
           options: {
-            responsive: true,
             scales: {
-              x: { display: true, title: { display: true, text: 'Timestamp' } },
-              y: { display: true, title: { display: true, text: 'Total Entries' } }
+              x: {
+                title: {    
+                  display: true,
+                  text: 'Hour of Day'
+                }
+              },
+              y: {
+                title: {    
+                  display: true,
+                  text: 'Average Value per Entry'
+                },
+                beginAtZero: true
+              }
             }
           }
-        });
       });
+    });
   </script>
 </body>
 </html>
+
