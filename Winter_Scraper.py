@@ -29,6 +29,7 @@ def get_raffle_data(driver, url):
     now = datetime.now()
 
     current_hour = now.strftime("%H") 
+    current_day = now.strftime("%D")
     for i, item in enumerate(raffle_container):
         if i >= len(raffle_types):
             break
@@ -47,7 +48,8 @@ def get_raffle_data(driver, url):
             'entry': raffle_entries.text,
             'item': raffle_items.text,
             'value': raffle_value.text,
-            'hour':current_hour })
+            'hour':current_hour,
+            'day':current_day})
     raffles = {k: v for k, v in raffles.items() if v}
     for rtype, data in raffles.items():
         path = f"raffles/{rtype}.json"
