@@ -68,5 +68,9 @@ def get_raffle_data(driver, url):
         with open(path, "w") as f:
             json.dump(items, f, indent=2)
     return raffles
+now = datetime.now()
+if now.month != 12:
+    print("Not December, skipping raffle scraper.")
+    exit(0)
 data = get_raffle_data(initialize_driver(), 'https://www.pullbox.gg/limited-event/winter-wonderland/raffle')
 
