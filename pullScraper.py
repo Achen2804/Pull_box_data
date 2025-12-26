@@ -71,4 +71,4 @@ def get_pull_data(driver, url):
         print("Error decoding JSON from data file.")
         
 
-get_pull_data(initialize_driver(False), "https://www.pullbox.gg/")
+get_pull_data(initialize_driver(), "https://www.pullbox.gg/")
