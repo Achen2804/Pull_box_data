@@ -25,7 +25,7 @@ def stamp_to_int(stamp):
 
 def get_pull_data(driver, url):
     driver.get(url)
-    pull_button = WebDriverWait(driver, 10).until(
+    pull_button = WebDriverWait(driver, 40).until(
         EC.element_to_be_clickable((
             By.XPATH,
             "//button[contains(@class,'size-full') and contains(@class,'rounded-l-sm') and contains(@class,'bg-stripes-muted') and .//*[name()='svg']]"
@@ -40,6 +40,7 @@ def get_pull_data(driver, url):
 )
     value_box = data_box.find_element(By.XPATH, '//span[.//img[@alt="Coin"]]')
     pull_value = value_box.text
+    pull_value = pull_value.split()[0]
     print(f"Pull value: {pull_value}")
 
     online_box = data_box.find_element(By.CLASS_NAME,"text-xs.font-normal.leading-none")
@@ -53,7 +54,7 @@ def get_pull_data(driver, url):
     path = "data/data.json"
     try:
         if os.path.exists(path):
-            with open(path, "w") as f:
+            with open(path, "r") as f:
                 items = json.load(f)
                 if not isinstance(items, list):
                     items = []
