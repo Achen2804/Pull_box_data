@@ -49,7 +49,7 @@ def get_pull_data(driver, url):
     print(f"Online users: {online_value}")
 
     print("Pull value = ", float(pull_value)/float(online_value))
-    if (datetime.now().minute >20 and datetime.now().minute <30) or (datetime.now().minute >50 and datetime.now().minute <=59):
+    if (not(datetime.now().minute >20 and datetime.now().minute <30) or (datetime.now().minute >50 and datetime.now().minute <=59)):
         raise ValueError("Scrapped too early, will skip.")
     path = "data/data.json"
     try:
