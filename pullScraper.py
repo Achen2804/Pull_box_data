@@ -56,6 +56,7 @@ def get_pull_data(driver, url):
     path = "data/data.json"
     try:
         if os.path.exists(path):
+            print("Data file exists, loading existing data.")
             with open(path, "r") as f:
                 items = json.load(f)
                 if not isinstance(items, list):
