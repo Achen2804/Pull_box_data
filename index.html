@@ -2,123 +2,95 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Raffle Stats</title>
+  <title>Pull Box Data</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <h1>Hourly Raffle Totals</h1>
-  <canvas id="hourlyChart" width="500" height="200"></canvas>
-  <h1>Daily Hourly Raffle Totals</h1>
-  <canvas id="dailyHourlyChart" width="500" height="200"></canvas>
+  <h1>Pull Data</h1>
+
+  <canvas id="halfHourChart" width="500" height="200"></canvas>
 
   <script>
-    // Load JSON data (adjust path as needed)
-    fetch('raffles/hourly.json')
+    // Load JSON data
+    let halfHourData = {};
+    fetch('data/data.json')
       .then(response => response.json())
-      .then(data => {
-        const flattenedData = data.flatMap(d => Array.isArray(d) ? d : [d]);
-        const numericData = flattenedData.map(d => ({
-          hour: parseInt(d.hour, 10),
-          entry: parseInt(d.entry.replace(/,/g, ''), 10),
-          value: parseFloat(d.value),
-          day: (d.day === undefined || d.day === null || d.day === "") ? null : parseInt(d.day.split("/")[1], 10)
-        }));
-        // Aggregate data by hour. We see how the average value per entry changes hour to hour
-        hourlyAggregatedData = numericData.reduce((acc, curr) => {
-          const existing = acc.find(item => item.hour === curr.hour);
-          if (existing) {
-            existing.entry += curr.entry;
-            existing.value += curr.value;
-          } else {
-            acc.push({ ...curr });
+      .then(
+      
+      data => {
+        console.log(data);
+        let numericData = data.map(d => {
+          // Parse timestamp and convert to EST
+          const date = new Date(d.timestamp);
+          const estDate = new Date(date.toLocaleString('en-US', { timeZone: 'America/New_York' }));
+          
+          // Round to nearest half hour
+          const minutes = estDate.getMinutes();
+          estDate.setMinutes(minutes < 30 ? 0 : 30, 0, 0);
+          
+          return {
+            date: estDate.toLocaleDateString('en-US', { timeZone: 'America/New_York',
+                        year: 'numeric',
+                        month: '2-digit',
+                        day: '2-digit'
+             }),
+            timestamp: estDate.toLocaleString('en-US', { 
+                        timeZone: 'America/New_York',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        hour12: false
+                      }),
+            pull_value: parseFloat(d.pull_value),
+            online_value: parseInt(d.online_value, 10),
+            ratio: parseFloat(d.ratio)
+          };
+        });
+        
+        // Half hour data aggregation
+        numericData.forEach(d => {
+          const key = d.timestamp;
+          if (!halfHourData[key]) {
+            halfHourData[key] = { pull_sum: 0, online_sum: 0, ratio_sum: 0, count: 0 };
           }
-          return acc;
-        }, []);
-        console.log(hourlyAggregatedData);
-        const labelsAD = hourlyAggregatedData.map(d => d.hour);
-        const hourlyAverageAD = hourlyAggregatedData.map(d => d.value/d.entry);
-        const ctxAD = document.getElementById('hourlyChart').getContext('2d');
-        const hourlyChart = new Chart(ctxAD, {
-          type: 'line',
-          data: {
-            labels: labelsAD,
-            datasets: [{
-              label: 'Average Value per Entry',
-              data: hourlyAverageAD,
-              borderColor: 'rgba(75, 192, 192, 1)',
-              backgroundColor: 'rgba(75, 192, 192, 0.2)',
-              fill: true,
-              tension: 0.1
-            }]
-          },
-          options: {
-            scales: {
-              x: {
-                title: {    
-                  display: true,
-                  text: 'Hour of Day'
-                }
-              },
-              y: {
-                title: {    
-                  display: true,
-                  text: 'Average Value per Entry'
-                },
-                beginAtZero: true
+          halfHourData[key].pull_sum += d.pull_value;
+          halfHourData[key].online_sum += d.online_value;
+          halfHourData[key].ratio_sum += d.ratio;
+          halfHourData[key].count += 1;
+        })
+        console.log(numericData);
+        
+        // Generate all 24-hour half-hour labels
+        const labels = [];
+        for (let hour = 0; hour < 24; hour++) {
+          labels.push(`${String(hour).padStart(2, '0')}:00`);
+          labels.push(`${String(hour).padStart(2, '0')}:30`);
+        }
+        
+        console.log(labels);
+        console.log(halfHourData);
+        const pullValues = labels.map(label => halfHourData[label]?.pull_sum || 0);
+        const onlineValues = labels.map(label => halfHourData[label]?.online_sum || 0);
+        const ratioValues = labels.map(label => halfHourData[label] ? halfHourData[label].ratio_sum / halfHourData[label].count : 0);
+        console.log(ratioValues)
+          // Create Pull Chart
+        const halfHourChart = new Chart(document.getElementById('halfHourChart'), {
+            type: 'line',
+            data: {
+              labels: labels,
+              datasets: [{
+                label: 'Expected pull value',
+                data: ratioValues,
+                borderColor: 'blue',
+                fill: false
+              }]
+            },
+            options: {
+              scales: {
+                y: { beginAtZero: true }
               }
             }
-          }
+          });
       });
-
-
-      // Aggregate data by day-hour. We see how the average value per entry changes hour to hour across days
-      dailyHourlyData = numericData.filter(d=> d.day !== null).reduce((acc, curr) => {
-          const existing = acc.find(item => item.day === curr.day);
-          if (existing) {
-            existing.entry += curr.entry;
-            existing.value += curr.value;
-          } else {
-            acc.push({ ...curr });
-          }
-          return acc;
-        }, []);
-        console.log(dailyHourlyData);
-        const labelsHD = dailyHourlyData.map(d => d.day);
-        const hourlyAverageHD = dailyHourlyData.map(d => d.value/d.entry);
-        const ctxHD = document.getElementById('dailyHourlyChart').getContext('2d');
-        const dailyDourlyChart = new Chart(ctxHD, {
-          type: 'line',
-          data: {
-            labels: labelsHD,
-            datasets: [{
-              label: 'Average Value per Entry',
-              data: hourlyAverageHD,
-              borderColor: 'rgba(75, 192, 192, 1)',
-              backgroundColor: 'rgba(75, 192, 192, 0.2)',
-              fill: true,
-              tension: 0.1
-            }]
-          },
-          options: {
-            scales: {
-              x: {
-                title: {    
-                  display: true,
-                  text: 'Hour of Day'
-                }
-              },
-              y: {
-                title: {    
-                  display: true,
-                  text: 'Average Value per Entry'
-                },
-                beginAtZero: true
-              }
-            }
-          }
-      });
-    });
-    
   </script>
 </body>
 </html>
