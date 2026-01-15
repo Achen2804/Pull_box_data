@@ -14,6 +14,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Check if minute is in valid range
+        run: |
+          MINUTE=$(date +%M)
+          if (( MINUTE > 0 && MINUTE < 20 || MINUTE > 30 && MINUTE < 50 )); then
+            echo "Current minute ($MINUTE) is outside valid range. Canceling job."
+            exit 1
+          fi
+          echo "Current minute ($MINUTE) is in valid range. Proceeding..."
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
