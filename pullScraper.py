@@ -67,7 +67,7 @@ def get_pull_data(driver, url):
             'pull_value': pull_value,
             'online_value': online_value,
             'ratio': float(pull_value)/float(online_value),
-            'timestamp': datetime.now().isoformat()
+            'timestamp': datetime.now().isoformat()+'Z'
         })
         with open(path, "w") as f:
             json.dump(items, f, indent=4)

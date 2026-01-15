@@ -22,9 +22,16 @@
         let numericData = data.map(d => {
           // Parse timestamp and convert to EST
           const date = new Date(d.timestamp);          
-          // Round to nearest half hour
+          // Round up to nearest half hour
           const minutes = date.getMinutes();
-          date.setMinutes(minutes < 30 ? 0 : 30, 0, 0);
+          if (minutes > 0 && minutes <= 30) {
+            date.setMinutes(30, 0, 0);
+          } else if (minutes > 30) {
+            date.setMinutes(0, 0, 0);
+            date.setHours(date.getHours() + 1);
+          } else {
+            date.setMinutes(0, 0, 0);
+          }
           
           return {
             date: date.toLocaleDateString('en-US',{
