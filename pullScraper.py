@@ -50,7 +50,7 @@ def get_pull_data(driver, url):
 
     print("Pull value = ", float(pull_value)/float(online_value))
     
-    path = "data/data.json"
+    path = "_data/data.json"
     try:
         if os.path.exists(path):
             print("Data file exists, loading existing data.")
