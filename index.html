@@ -9,10 +9,37 @@
   <h1>Pull Data</h1>
 
   <canvas id="halfHourChart" width="500" height="200"></canvas>
+  <canvas id="weeklyChart" width="500" height="200"></canvas>
 
   <script>
+    function createChart(chartID, data,labels){
+      
+      const pullValues = labels.map(label => data[label]?.pull_sum || 0);
+        const onlineValues = labels.map(label => data[label]?.online_sum || 0);
+        const ratioValues = labels.map(label => data[label] ? data[label].ratio_sum / data[label].count : 0);
+        console.log(ratioValues)
+        const newChart = new Chart(document.getElementById(chartID), {
+            type: 'line',
+            data: {
+              labels: labels,
+              datasets: [{
+                label: 'Expected pull value',
+                data: ratioValues,
+                borderColor: 'blue',
+                fill: false
+              }]
+            },
+            options: {
+              scales: {
+                y: { beginAtZero: true }
+              }
+            }
+          });
+          return newChart
+    }
     // Load JSON data
     let halfHourData = {};
+    let weeklyData = {};
     fetch('data/data.json')
       .then(response => response.json())
       .then(
@@ -49,51 +76,42 @@
             ratio: parseFloat(d.ratio)
           };
         });
-        
+        const weekdayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         // Half hour data aggregation
         numericData.forEach(d => {
-          const key = d.timestamp;
-          if (!halfHourData[key]) {
-            halfHourData[key] = { pull_sum: 0, online_sum: 0, ratio_sum: 0, count: 0 };
+          const hourlyKey = d.timestamp;
+          if (!halfHourData[hourlyKey]) {
+            halfHourData[hourlyKey] = { pull_sum: 0, online_sum: 0, ratio_sum: 0, count: 0 };
           }
-          halfHourData[key].pull_sum += d.pull_value;
-          halfHourData[key].online_sum += d.online_value;
-          halfHourData[key].ratio_sum += d.ratio;
-          halfHourData[key].count += 1;
+          halfHourData[hourlyKey].pull_sum += d.pull_value;
+          halfHourData[hourlyKey].online_sum += d.online_value;
+          halfHourData[hourlyKey].ratio_sum += d.ratio;
+          halfHourData[hourlyKey].count += 1;
+          const weeklyKey = new Date(d.date).getDay();
+          const weekday = weekdayNames[weeklyKey];
+          if (!weeklyData[weekday]) {
+            weeklyData[weekday] = { pull_sum: 0, online_sum: 0, ratio_sum: 0, count: 0 };
+          }
+          weeklyData[weekday].pull_sum += d.pull_value;
+          weeklyData[weekday].online_sum += d.online_value;
+          weeklyData[weekday].ratio_sum += d.ratio;
+          weeklyData[weekday].count += 1;
         })
-        console.log(numericData);
+        //console.log(numericData);
         
         // Generate all 24-hour half-hour labels
-        const labels = [];
+        const hourlyLabels = [];
         for (let hour = 0; hour < 24; hour++) {
-          labels.push(`${String(hour).padStart(2, '0')}:00`);
-          labels.push(`${String(hour).padStart(2, '0')}:30`);
+          hourlyLabels.push(`${String(hour).padStart(2, '0')}:00`);
+          hourlyLabels.push(`${String(hour).padStart(2, '0')}:30`);
         }
+
+
+        let hourChart = createChart('halfHourChart', halfHourData, hourlyLabels);
+        let weeklyChart = createChart('weeklyChart', weeklyData, weekdayNames);
+        //console.log(labels);
+        //console.log(halfHourData);
         
-        console.log(labels);
-        console.log(halfHourData);
-        const pullValues = labels.map(label => halfHourData[label]?.pull_sum || 0);
-        const onlineValues = labels.map(label => halfHourData[label]?.online_sum || 0);
-        const ratioValues = labels.map(label => halfHourData[label] ? halfHourData[label].ratio_sum / halfHourData[label].count : 0);
-        console.log(ratioValues)
-          // Create Pull Chart
-        const halfHourChart = new Chart(document.getElementById('halfHourChart'), {
-            type: 'line',
-            data: {
-              labels: labels,
-              datasets: [{
-                label: 'Expected pull value',
-                data: ratioValues,
-                borderColor: 'blue',
-                fill: false
-              }]
-            },
-            options: {
-              scales: {
-                y: { beginAtZero: true }
-              }
-            }
-          });
       });
   </script>
 </body>
