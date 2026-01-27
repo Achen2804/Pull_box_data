@@ -21,12 +21,11 @@ def stamp_to_int(stamp):
     if match_s: s = int(match_s.group(1))
     return h*3600 + m*60 + s
 
-def get_raffle_data(driver, url):
+def get_raffle_data(driver, url,now):
     driver.get(url)
     raffle_container = driver.find_elements(By.CSS_SELECTOR, '.p-6.bg-card.rounded-lg.border-2.border-border.hover\:border-primary\/50.transition-colors')
     raffle_types = ["hourly", "12hour", "24hour"]
     raffles = {rtype: [] for rtype in raffle_types}
-    now = datetime.now()
 
     current_hour = now.strftime("%H") 
     current_day = now.strftime("%D")
@@ -72,5 +71,5 @@ now = datetime.now()
 if now.month != 12:
     print("Not December, skipping raffle scraper.")
     exit(0)
-data = get_raffle_data(initialize_driver(), 'https://www.pullbox.gg/limited-event/winter-wonderland/raffle')
+data = get_raffle_data(initialize_driver(), 'https://www.pullbox.gg/limited-event/winter-wonderland/raffle',now)
 
