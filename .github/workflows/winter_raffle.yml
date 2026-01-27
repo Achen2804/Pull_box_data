@@ -2,8 +2,8 @@ name: Raffle Scraper
 
 on:
   schedule:
-    - cron: '50 * * * *'
-    - cron: '20 * * * *'
+    - cron: '55 * * * *'
+    - cron: '25 * * * *'
   workflow_dispatch:
 
 jobs:
