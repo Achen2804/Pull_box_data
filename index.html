@@ -12,30 +12,69 @@
   <canvas id="weeklyChart" width="500" height="200"></canvas>
 
   <script>
-    function createChart(chartID, data,labels){
-      
+    function createChart(chartID, data, labels){
       const pullValues = labels.map(label => data[label]?.pull_sum || 0);
-        const onlineValues = labels.map(label => data[label]?.online_sum || 0);
-        const ratioValues = labels.map(label => data[label] ? data[label].ratio_sum / data[label].count : 0);
-        console.log(ratioValues)
-        const newChart = new Chart(document.getElementById(chartID), {
-            type: 'line',
-            data: {
-              labels: labels,
-              datasets: [{
-                label: 'Expected pull value',
-                data: ratioValues,
-                borderColor: 'blue',
-                fill: false
-              }]
+      const onlineValues = labels.map(label => data[label]?.online_sum || 0);
+      // compute mean and std for ratio
+      const ratioMean = labels.map(label => {
+        const entry = data[label];
+        return (entry && entry.count) ? entry.ratio_sum / entry.count : 0;
+      });
+      const ratioStd = labels.map((label, i) => {
+        const entry = data[label];
+        if (!entry || !entry.count) return 0;
+        const mean = ratioMean[i];
+        const meanSq = entry.ratio_sq_sum / entry.count;
+        const variance = Math.max(0, meanSq - mean * mean);
+        return Math.sqrt(variance);
+      });
+
+      // upper and lower bounds for ±1sig
+      const upper = ratioMean.map((m, i) => m + ratioStd[i]);
+      const lower = ratioMean.map((m, i) => m - ratioStd[i]);
+
+      const newChart = new Chart(document.getElementById(chartID), {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [
+            {
+              label: 'Lower 1sig',
+              data: lower,
+              borderColor: 'rgba(0,0,0,0)',
+              backgroundColor: 'rgba(0,123,255,0.08)',
+              pointRadius: 3,
+              pointHoverRadius: 5,
+              fill: false
             },
-            options: {
-              scales: {
-                y: { beginAtZero: true }
-              }
+            {
+              label: 'Upper 1sig',
+              data: upper,
+              borderColor: 'rgba(0,0,0,0)',
+              backgroundColor: 'rgba(0,123,255,0.12)',
+              pointRadius: 3,
+              pointHoverRadius: 5,
+              fill: '-1'
+            },
+            {
+              label: 'Expected pull value',
+              data: ratioMean,
+              borderColor: 'blue',
+              backgroundColor: 'rgba(0,123,255,0.15)',
+              fill: false,
+              tension: 0.1,
+              pointRadius: 0,
+              pointHoverRadius: 0
             }
-          });
-          return newChart
+          ]
+        },
+        options: {
+          scales: {
+            y: { beginAtZero: true }
+          }
+        }
+      });
+      return newChart;
     }
     // Load JSON data
     let halfHourData = {};
@@ -81,20 +120,22 @@
         numericData.forEach(d => {
           const hourlyKey = d.timestamp;
           if (!halfHourData[hourlyKey]) {
-            halfHourData[hourlyKey] = { pull_sum: 0, online_sum: 0, ratio_sum: 0, count: 0 };
+            halfHourData[hourlyKey] = { pull_sum: 0, online_sum: 0, ratio_sum: 0, ratio_sq_sum: 0, count: 0 };
           }
           halfHourData[hourlyKey].pull_sum += d.pull_value;
           halfHourData[hourlyKey].online_sum += d.online_value;
           halfHourData[hourlyKey].ratio_sum += d.ratio;
+          halfHourData[hourlyKey].ratio_sq_sum += d.ratio * d.ratio;
           halfHourData[hourlyKey].count += 1;
           const weeklyKey = new Date(d.date).getDay();
           const weekday = weekdayNames[weeklyKey];
           if (!weeklyData[weekday]) {
-            weeklyData[weekday] = { pull_sum: 0, online_sum: 0, ratio_sum: 0, count: 0 };
+            weeklyData[weekday] = { pull_sum: 0, online_sum: 0, ratio_sum: 0, ratio_sq_sum: 0, count: 0 };
           }
           weeklyData[weekday].pull_sum += d.pull_value;
           weeklyData[weekday].online_sum += d.online_value;
           weeklyData[weekday].ratio_sum += d.ratio;
+          weeklyData[weekday].ratio_sq_sum += d.ratio * d.ratio;
           weeklyData[weekday].count += 1;
         })
         //console.log(numericData);
