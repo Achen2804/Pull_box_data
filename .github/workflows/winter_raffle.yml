@@ -1,7 +1,6 @@
 name: Raffle Scraper
 
 on:
-  schedule:
   workflow_dispatch:
 
 jobs:
