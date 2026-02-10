@@ -1,0 +1,50 @@
+name: Raffle Scraper
+
+on:
+  repository_dispatch:
+    types: [vercel-cron]
+  workflow_dispatch:
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Check if minute is in valid range
+        run: |
+          MINUTE=$(date +%M)
+          if (( MINUTE > 0 && MINUTE < 20 || MINUTE > 30 && MINUTE < 50 )); then
+            echo "Current minute ($MINUTE) is outside valid range. Canceling job."
+            exit 1
+          fi
+          echo "Current minute ($MINUTE) is in valid range. Proceeding..."
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - name: Install dependencies
+        run: |
+          git pull origin main --rebase
+          python -m pip install --upgrade pip
+          pip install -q selenium
+
+      - name: Run Standard Pull Script
+        run: python pullScraper.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+           
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update from github actions"
+            git push origin ${{github.ref_name}}
+          fi
