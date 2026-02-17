@@ -4,14 +4,209 @@
   <meta charset="utf-8">
   <title>Pull Box Data</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      padding: 20px;
+      background-color: #f6f8fa;
+    }
+    h1 {
+      color: #24292e;
+    }
+    h2 {
+      color: #555;
+      margin-top: 30px;
+      font-size: 16px;
+    }
+    canvas {
+      margin-bottom: 40px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 10px;
+    }
+    #calendar-container {
+      background: white;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      overflow-x: auto;
+      width: 100%;
+    }
+    .calendar-wrapper {
+      display: block;
+      max-width: 100%;
+    }
+    .calendar-month {
+      margin-bottom: 30px;
+    }
+    .calendar-month-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #24292e;
+      margin-bottom: 8px;
+    }
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+      width: 100%;
+    }
+    .calendar-cell {
+      aspect-ratio: 1;
+      border-radius: 2px;
+      border: 1px solid #e1e4e8;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: clamp(8px, 20vw / 7, 20px);
+      padding: 0;
+      min-width: 0;
+    }
+    .calendar-cell:hover {
+      border-color: #24292e;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    .calendar-cell.empty {
+      background-color: #ebedf0;
+      border-color: #ebedf0;
+      cursor: default;
+    }
+    .calendar-cell.empty:hover {
+      border-color: #ebedf0;
+      box-shadow: none;
+    }
+    .calendar-legend {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      color: #666;
+    }
+    .calendar-legend-label {
+      margin-right: 10px;
+    }
+    .calendar-legend-cell {
+      width: 25px;
+      height: 25px;
+      border-radius: 2px;
+    }
+  </style>
 </head>
 <body>
   <h1>Pullbox Data Charts</h1>
 
+  <h2>Half-Hour Distribution</h2>
   <canvas id="halfHourChart" width="500" height="200"></canvas>
+  
+  <h2>Weekly Distribution</h2>
   <canvas id="weeklyChart" width="500" height="200"></canvas>
 
+  <h2>Yearly Heatmap</h2>
+  <div id="calendar-container"></div>
+
   <script>
+    function createGitHubCalendar(yearlyData, containerId, year = 2026) {
+      const container = document.getElementById(containerId);
+      container.innerHTML = '';
+      
+      let maxValue = 0;
+      Object.values(yearlyData).forEach(data => {
+        if (data.count > 0) {
+          const value = data.ratio_sum / data.count;
+          maxValue = Math.max(maxValue, value);
+        }
+      });
+      
+      const getColor = (value, max) => {
+        if (value === 0) return '#ebedf0';
+        const intensity = value / max;
+        if (intensity < 0.25) return '#c6e48b';
+        if (intensity < 0.5) return '#7bc96f';
+        if (intensity < 0.75) return '#239a3b';
+        return '#196127';
+      };
+      
+      const wrapper = document.createElement('div');
+      wrapper.className = 'calendar-wrapper';
+      
+      // Create each month
+      for (let month = 0; month < 12; month++) {
+        const monthDiv = document.createElement('div');
+        monthDiv.className = 'calendar-month';
+        
+        const monthLabel = document.createElement('div');
+        monthLabel.className = 'calendar-month-label';
+        monthLabel.textContent = new Date(year, month).toLocaleDateString('en-US', { month: 'short' });
+        monthDiv.appendChild(monthLabel);
+        
+        const grid = document.createElement('div');
+        grid.className = 'calendar-grid';
+        
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+        
+        // Day cells only - no empty cells for weekday offset
+        for (let day = 1; day <= daysInMonth; day++) {
+          const monthDayStr = `${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+          const data = yearlyData[monthDayStr];
+          
+          const cell = document.createElement('div');
+          cell.className = 'calendar-cell';
+          
+          if (data && data.count > 0) {
+            const value = data.ratio_sum / data.count;
+            cell.style.backgroundColor = getColor(value, maxValue);
+            cell.title = `${monthDayStr}: ${value.toFixed(2)} (${data.count} entries)`;
+            cell.dataset.value = value.toFixed(5);
+            cell.dataset.count = data.count;
+          } else {
+            cell.style.backgroundColor = '#ebedf0';
+            cell.title = `${monthDayStr}: No data`;
+            cell.dataset.value = 'N/A';
+            cell.dataset.count = '0';
+          }
+          
+          cell.textContent = day;
+          
+          // Add hover events to show value
+          cell.addEventListener('mouseenter', () => {
+            const originalText = cell.textContent;
+            cell.dataset.originalText = originalText;
+            if (cell.dataset.value !== 'N/A') {
+              cell.textContent = cell.dataset.value;
+            }
+          });
+          
+          cell.addEventListener('mouseleave', () => {
+            cell.textContent = cell.dataset.originalText || day;
+          });
+          
+          grid.appendChild(cell);
+        }
+        
+        monthDiv.appendChild(grid);
+        wrapper.appendChild(monthDiv);
+      }
+      
+      container.appendChild(wrapper);
+      
+      // Add legend
+      const legend = document.createElement('div');
+      legend.className = 'calendar-legend';
+      legend.innerHTML = `
+        <span class="calendar-legend-label">Less</span>
+        <div class="calendar-legend-cell" style="background-color: #ebedf0;"></div>
+        <div class="calendar-legend-cell" style="background-color: #c6e48b;"></div>
+        <div class="calendar-legend-cell" style="background-color: #7bc96f;"></div>
+        <div class="calendar-legend-cell" style="background-color: #239a3b;"></div>
+        <div class="calendar-legend-cell" style="background-color: #196127;"></div>
+        <span class="calendar-legend-label">More</span>
+      `;
+      container.appendChild(legend);
+    }
+
     function createChart(chartID, data, labels){
       const pullValues = labels.map(label => data[label]?.pull_sum || 0);
       const onlineValues = labels.map(label => data[label]?.online_sum || 0);
@@ -29,7 +224,6 @@
         return Math.sqrt(variance);
       });
 
-      // upper and lower bounds for ±1sig
       const upper = ratioMean.map((m, i) => m + ratioStd[i]);
       const lower = ratioMean.map((m, i) => m - ratioStd[i]);
 
@@ -79,6 +273,7 @@
     // Load JSON data
     let halfHourData = {};
     let weeklyData = {};
+    let yearlyData = {};
     fetch('_data/data.json')
       .then(response => response.json())
       .then(
@@ -105,6 +300,7 @@
                         month: '2-digit',
                         day: '2-digit'
              }),
+            monthDay: `${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`,
             timestamp: date.toLocaleString('en-US', { 
                         hour: '2-digit',
                         minute: '2-digit',
@@ -115,6 +311,7 @@
             ratio: parseFloat(d.ratio)
           };
         });
+        
         const weekdayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         // Half hour data aggregation
         numericData.forEach(d => {
@@ -137,6 +334,17 @@
           weeklyData[weekday].ratio_sum += d.ratio;
           weeklyData[weekday].ratio_sq_sum += d.ratio * d.ratio;
           weeklyData[weekday].count += 1;
+
+          // Yearly data aggregation (by month-day only, ignoring year)
+          const monthDayKey = d.monthDay;
+          if (!yearlyData[monthDayKey]) {
+            yearlyData[monthDayKey] = { pull_sum: 0, online_sum: 0, ratio_sum: 0, ratio_sq_sum: 0, count: 0 };
+          }
+          yearlyData[monthDayKey].pull_sum += d.pull_value;
+          yearlyData[monthDayKey].online_sum += d.online_value;
+          yearlyData[monthDayKey].ratio_sum += d.ratio;
+          yearlyData[monthDayKey].ratio_sq_sum += d.ratio * d.ratio;
+          yearlyData[monthDayKey].count += 1;
         })
         //console.log(numericData);
         
@@ -150,6 +358,10 @@
 
         let hourChart = createChart('halfHourChart', halfHourData, hourlyLabels);
         let weeklyChart = createChart('weeklyChart', weeklyData, weekdayNames);
+        
+        // Create GitHub-style calendar
+        console.log(yearlyData);
+        createGitHubCalendar(yearlyData, 'calendar-container');
         //console.log(labels);
         //console.log(halfHourData);
         
