@@ -1,6 +1,8 @@
 name: Raffle Scraper
 
 on:
+  repository_dispatch:
+    types: [vercel-cron]
   workflow_dispatch:
 
 jobs:

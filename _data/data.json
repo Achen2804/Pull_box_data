@@ -2596,5 +2596,2003 @@
         "online_value": "254",
         "ratio": 0.018858267716535433,
         "timestamp": "2026-02-10T13:58:26.584564Z"
+    },
+    {
+        "pull_value": "3.98",
+        "online_value": "296",
+        "ratio": 0.013445945945945946,
+        "timestamp": "2026-02-10T15:56:32.232910Z"
+    },
+    {
+        "pull_value": "3.93",
+        "online_value": "317",
+        "ratio": 0.012397476340694007,
+        "timestamp": "2026-02-10T16:28:33.461561Z"
+    },
+    {
+        "pull_value": "4.08",
+        "online_value": "328",
+        "ratio": 0.012439024390243903,
+        "timestamp": "2026-02-10T16:58:37.659969Z"
+    },
+    {
+        "pull_value": "4.84",
+        "online_value": "322",
+        "ratio": 0.015031055900621117,
+        "timestamp": "2026-02-10T17:28:36.593154Z"
+    },
+    {
+        "pull_value": "5.11",
+        "online_value": "338",
+        "ratio": 0.015118343195266273,
+        "timestamp": "2026-02-10T17:58:44.379014Z"
+    },
+    {
+        "pull_value": "6.35",
+        "online_value": "341",
+        "ratio": 0.018621700879765394,
+        "timestamp": "2026-02-10T18:28:40.283854Z"
+    },
+    {
+        "pull_value": "9.13",
+        "online_value": "341",
+        "ratio": 0.026774193548387098,
+        "timestamp": "2026-02-10T18:58:34.698613Z"
+    },
+    {
+        "pull_value": "5.68",
+        "online_value": "355",
+        "ratio": 0.016,
+        "timestamp": "2026-02-10T19:28:36.589971Z"
+    },
+    {
+        "pull_value": "7.26",
+        "online_value": "375",
+        "ratio": 0.01936,
+        "timestamp": "2026-02-10T19:58:51.648315Z"
+    },
+    {
+        "pull_value": "9.16",
+        "online_value": "369",
+        "ratio": 0.024823848238482386,
+        "timestamp": "2026-02-10T20:28:37.256686Z"
+    },
+    {
+        "pull_value": "10.36",
+        "online_value": "388",
+        "ratio": 0.02670103092783505,
+        "timestamp": "2026-02-10T20:58:42.642688Z"
+    },
+    {
+        "pull_value": "6.03",
+        "online_value": "377",
+        "ratio": 0.0159946949602122,
+        "timestamp": "2026-02-10T21:28:39.158384Z"
+    },
+    {
+        "pull_value": "4.20",
+        "online_value": "408",
+        "ratio": 0.010294117647058823,
+        "timestamp": "2026-02-10T21:58:32.007145Z"
+    },
+    {
+        "pull_value": "5.95",
+        "online_value": "395",
+        "ratio": 0.015063291139240507,
+        "timestamp": "2026-02-10T22:28:58.996070Z"
+    },
+    {
+        "pull_value": "5.22",
+        "online_value": "393",
+        "ratio": 0.013282442748091603,
+        "timestamp": "2026-02-10T22:58:46.897968Z"
+    },
+    {
+        "pull_value": "4.72",
+        "online_value": "417",
+        "ratio": 0.0113189448441247,
+        "timestamp": "2026-02-10T23:28:40.016364Z"
+    },
+    {
+        "pull_value": "6.43",
+        "online_value": "449",
+        "ratio": 0.014320712694877506,
+        "timestamp": "2026-02-10T23:58:25.095372Z"
+    },
+    {
+        "pull_value": "18.00",
+        "online_value": "494",
+        "ratio": 0.03643724696356275,
+        "timestamp": "2026-02-11T00:28:29.894620Z"
+    },
+    {
+        "pull_value": "22.36",
+        "online_value": "522",
+        "ratio": 0.04283524904214559,
+        "timestamp": "2026-02-11T00:58:30.780741Z"
+    },
+    {
+        "pull_value": "28.49",
+        "online_value": "504",
+        "ratio": 0.056527777777777774,
+        "timestamp": "2026-02-11T01:28:34.147795Z"
+    },
+    {
+        "pull_value": "17.17",
+        "online_value": "514",
+        "ratio": 0.03340466926070039,
+        "timestamp": "2026-02-11T01:58:33.568096Z"
+    },
+    {
+        "pull_value": "19.",
+        "online_value": "488",
+        "ratio": 0.0389344262295082,
+        "timestamp": "2026-02-11T02:28:33.570658Z"
+    },
+    {
+        "pull_value": "20.9",
+        "online_value": "494",
+        "ratio": 0.0423076923076923,
+        "timestamp": "2026-02-11T02:58:29.508937Z"
+    },
+    {
+        "pull_value": "20.90",
+        "online_value": "489",
+        "ratio": 0.042740286298568506,
+        "timestamp": "2026-02-11T03:28:34.608063Z"
+    },
+    {
+        "pull_value": "19.26",
+        "online_value": "472",
+        "ratio": 0.040805084745762714,
+        "timestamp": "2026-02-11T03:58:39.142970Z"
+    },
+    {
+        "pull_value": "20.97",
+        "online_value": "443",
+        "ratio": 0.04733634311512415,
+        "timestamp": "2026-02-11T04:28:30.835471Z"
+    },
+    {
+        "pull_value": "10.44",
+        "online_value": "411",
+        "ratio": 0.025401459854014596,
+        "timestamp": "2026-02-11T04:58:30.993874Z"
+    },
+    {
+        "pull_value": "8.05",
+        "online_value": "369",
+        "ratio": 0.021815718157181575,
+        "timestamp": "2026-02-11T05:28:31.220091Z"
+    },
+    {
+        "pull_value": "10.41",
+        "online_value": "352",
+        "ratio": 0.029573863636363638,
+        "timestamp": "2026-02-11T05:58:37.607522Z"
+    },
+    {
+        "pull_value": "14.58",
+        "online_value": "336",
+        "ratio": 0.04339285714285714,
+        "timestamp": "2026-02-11T06:28:32.725927Z"
+    },
+    {
+        "pull_value": "14.",
+        "online_value": "298",
+        "ratio": 0.04697986577181208,
+        "timestamp": "2026-02-11T06:58:33.372086Z"
+    },
+    {
+        "pull_value": "6.97",
+        "online_value": "277",
+        "ratio": 0.025162454873646208,
+        "timestamp": "2026-02-11T07:28:26.765147Z"
+    },
+    {
+        "pull_value": "6.74",
+        "online_value": "239",
+        "ratio": 0.02820083682008368,
+        "timestamp": "2026-02-11T07:58:40.790381Z"
+    },
+    {
+        "pull_value": "6.91",
+        "online_value": "239",
+        "ratio": 0.02891213389121339,
+        "timestamp": "2026-02-11T08:28:31.916973Z"
+    },
+    {
+        "pull_value": "16.45",
+        "online_value": "222",
+        "ratio": 0.07409909909909909,
+        "timestamp": "2026-02-11T08:58:31.033063Z"
+    },
+    {
+        "pull_value": "8.51",
+        "online_value": "214",
+        "ratio": 0.039766355140186914,
+        "timestamp": "2026-02-11T09:28:32.336100Z"
+    },
+    {
+        "pull_value": "8.95",
+        "online_value": "201",
+        "ratio": 0.0445273631840796,
+        "timestamp": "2026-02-11T09:58:32.342106Z"
+    },
+    {
+        "pull_value": "7.44",
+        "online_value": "190",
+        "ratio": 0.03915789473684211,
+        "timestamp": "2026-02-11T10:28:27.281219Z"
+    },
+    {
+        "pull_value": "7.53",
+        "online_value": "189",
+        "ratio": 0.039841269841269844,
+        "timestamp": "2026-02-11T10:58:29.851315Z"
+    },
+    {
+        "pull_value": "5.28",
+        "online_value": "184",
+        "ratio": 0.028695652173913046,
+        "timestamp": "2026-02-11T11:28:26.242212Z"
+    },
+    {
+        "pull_value": "4.82",
+        "online_value": "183",
+        "ratio": 0.026338797814207653,
+        "timestamp": "2026-02-11T11:58:33.531735Z"
+    },
+    {
+        "pull_value": "4.73",
+        "online_value": "192",
+        "ratio": 0.02463541666666667,
+        "timestamp": "2026-02-11T12:28:25.958667Z"
+    },
+    {
+        "pull_value": "6.89",
+        "online_value": "205",
+        "ratio": 0.03360975609756097,
+        "timestamp": "2026-02-11T12:58:33.489109Z"
+    },
+    {
+        "pull_value": "6.15",
+        "online_value": "221",
+        "ratio": 0.027828054298642536,
+        "timestamp": "2026-02-11T13:28:34.467383Z"
+    },
+    {
+        "pull_value": "6.36",
+        "online_value": "243",
+        "ratio": 0.02617283950617284,
+        "timestamp": "2026-02-11T13:58:34.644270Z"
+    },
+    {
+        "pull_value": "4.11",
+        "online_value": "270",
+        "ratio": 0.015222222222222224,
+        "timestamp": "2026-02-11T14:28:32.136610Z"
+    },
+    {
+        "pull_value": "13.07",
+        "online_value": "294",
+        "ratio": 0.04445578231292517,
+        "timestamp": "2026-02-11T14:58:34.747605Z"
+    },
+    {
+        "pull_value": "11.34",
+        "online_value": "311",
+        "ratio": 0.03646302250803859,
+        "timestamp": "2026-02-11T15:28:34.131221Z"
+    },
+    {
+        "pull_value": "17.70",
+        "online_value": "344",
+        "ratio": 0.05145348837209302,
+        "timestamp": "2026-02-11T15:58:33.749270Z"
+    },
+    {
+        "pull_value": "11.01",
+        "online_value": "332",
+        "ratio": 0.03316265060240964,
+        "timestamp": "2026-02-11T16:28:40.602854Z"
+    },
+    {
+        "pull_value": "9.30",
+        "online_value": "347",
+        "ratio": 0.026801152737752163,
+        "timestamp": "2026-02-11T16:58:38.884441Z"
+    },
+    {
+        "pull_value": "10.25",
+        "online_value": "348",
+        "ratio": 0.029454022988505746,
+        "timestamp": "2026-02-11T17:28:26.309207Z"
+    },
+    {
+        "pull_value": "11.35",
+        "online_value": "355",
+        "ratio": 0.031971830985915495,
+        "timestamp": "2026-02-11T17:58:35.710378Z"
+    },
+    {
+        "pull_value": "15.88",
+        "online_value": "361",
+        "ratio": 0.04398891966759003,
+        "timestamp": "2026-02-11T18:28:39.159748Z"
+    },
+    {
+        "pull_value": "10.56",
+        "online_value": "364",
+        "ratio": 0.029010989010989013,
+        "timestamp": "2026-02-11T18:58:36.849091Z"
+    },
+    {
+        "pull_value": "9.55",
+        "online_value": "359",
+        "ratio": 0.026601671309192203,
+        "timestamp": "2026-02-11T19:28:33.144470Z"
+    },
+    {
+        "pull_value": "5.24",
+        "online_value": "362",
+        "ratio": 0.014475138121546962,
+        "timestamp": "2026-02-11T19:58:33.128868Z"
+    },
+    {
+        "pull_value": "6.88",
+        "online_value": "374",
+        "ratio": 0.01839572192513369,
+        "timestamp": "2026-02-11T20:28:37.673227Z"
+    },
+    {
+        "pull_value": "11.34",
+        "online_value": "387",
+        "ratio": 0.02930232558139535,
+        "timestamp": "2026-02-11T20:58:31.103957Z"
+    },
+    {
+        "pull_value": "9.27",
+        "online_value": "387",
+        "ratio": 0.02395348837209302,
+        "timestamp": "2026-02-11T21:28:33.719654Z"
+    },
+    {
+        "pull_value": "14.18",
+        "online_value": "387",
+        "ratio": 0.03664082687338501,
+        "timestamp": "2026-02-11T21:58:27.131073Z"
+    },
+    {
+        "pull_value": "4.56",
+        "online_value": "393",
+        "ratio": 0.011603053435114502,
+        "timestamp": "2026-02-11T22:28:34.067594Z"
+    },
+    {
+        "pull_value": "9.66",
+        "online_value": "394",
+        "ratio": 0.02451776649746193,
+        "timestamp": "2026-02-11T22:58:35.589079Z"
+    },
+    {
+        "pull_value": "5.05",
+        "online_value": "418",
+        "ratio": 0.01208133971291866,
+        "timestamp": "2026-02-11T23:28:37.717327Z"
+    },
+    {
+        "pull_value": "5.37",
+        "online_value": "449",
+        "ratio": 0.011959910913140312,
+        "timestamp": "2026-02-11T23:58:32.229193Z"
+    },
+    {
+        "pull_value": "22.10",
+        "online_value": "502",
+        "ratio": 0.04402390438247012,
+        "timestamp": "2026-02-12T00:28:32.743642Z"
+    },
+    {
+        "pull_value": "13.84",
+        "online_value": "521",
+        "ratio": 0.02656429942418426,
+        "timestamp": "2026-02-12T00:58:34.477843Z"
+    },
+    {
+        "pull_value": "18.40",
+        "online_value": "519",
+        "ratio": 0.03545279383429672,
+        "timestamp": "2026-02-12T01:28:38.366836Z"
+    },
+    {
+        "pull_value": "95.14",
+        "online_value": "577",
+        "ratio": 0.16488734835355287,
+        "timestamp": "2026-02-12T01:58:33.611933Z"
+    },
+    {
+        "pull_value": "11.48",
+        "online_value": "527",
+        "ratio": 0.021783681214421254,
+        "timestamp": "2026-02-12T02:28:32.394253Z"
+    },
+    {
+        "pull_value": "9.99",
+        "online_value": "522",
+        "ratio": 0.019137931034482757,
+        "timestamp": "2026-02-12T02:58:32.319715Z"
+    },
+    {
+        "pull_value": "20.02",
+        "online_value": "488",
+        "ratio": 0.04102459016393443,
+        "timestamp": "2026-02-12T03:28:33.960749Z"
+    },
+    {
+        "pull_value": "20.14",
+        "online_value": "477",
+        "ratio": 0.042222222222222223,
+        "timestamp": "2026-02-12T03:58:32.635036Z"
+    },
+    {
+        "pull_value": "39.63",
+        "online_value": "459",
+        "ratio": 0.08633986928104576,
+        "timestamp": "2026-02-12T04:28:36.880533Z"
+    },
+    {
+        "pull_value": "41.70",
+        "online_value": "417",
+        "ratio": 0.1,
+        "timestamp": "2026-02-12T04:58:32.073373Z"
+    },
+    {
+        "pull_value": "46.45",
+        "online_value": "389",
+        "ratio": 0.11940874035989718,
+        "timestamp": "2026-02-12T05:28:30.352189Z"
+    },
+    {
+        "pull_value": "31.8",
+        "online_value": "367",
+        "ratio": 0.08664850136239782,
+        "timestamp": "2026-02-12T05:58:37.099948Z"
+    },
+    {
+        "pull_value": "11.72",
+        "online_value": "314",
+        "ratio": 0.037324840764331214,
+        "timestamp": "2026-02-12T06:28:30.603624Z"
+    },
+    {
+        "pull_value": "8.61",
+        "online_value": "306",
+        "ratio": 0.02813725490196078,
+        "timestamp": "2026-02-12T06:58:32.345680Z"
+    },
+    {
+        "pull_value": "13.39",
+        "online_value": "280",
+        "ratio": 0.04782142857142857,
+        "timestamp": "2026-02-12T07:28:29.868491Z"
+    },
+    {
+        "pull_value": "10.66",
+        "online_value": "261",
+        "ratio": 0.04084291187739464,
+        "timestamp": "2026-02-12T07:58:32.959274Z"
+    },
+    {
+        "pull_value": "10.35",
+        "online_value": "241",
+        "ratio": 0.04294605809128631,
+        "timestamp": "2026-02-12T08:28:30.558683Z"
+    },
+    {
+        "pull_value": "5.06",
+        "online_value": "228",
+        "ratio": 0.022192982456140348,
+        "timestamp": "2026-02-12T08:58:24.037503Z"
+    },
+    {
+        "pull_value": "5.42",
+        "online_value": "216",
+        "ratio": 0.025092592592592593,
+        "timestamp": "2026-02-12T09:28:35.445208Z"
+    },
+    {
+        "pull_value": "4.55",
+        "online_value": "211",
+        "ratio": 0.02156398104265403,
+        "timestamp": "2026-02-12T09:58:44.338726Z"
+    },
+    {
+        "pull_value": "6.41",
+        "online_value": "208",
+        "ratio": 0.030817307692307692,
+        "timestamp": "2026-02-12T10:28:25.260875Z"
+    },
+    {
+        "pull_value": "8.66",
+        "online_value": "204",
+        "ratio": 0.04245098039215686,
+        "timestamp": "2026-02-12T10:58:31.084083Z"
+    },
+    {
+        "pull_value": "22.96",
+        "online_value": "213",
+        "ratio": 0.10779342723004695,
+        "timestamp": "2026-02-12T11:28:49.195204Z"
+    },
+    {
+        "pull_value": "70.35",
+        "online_value": "226",
+        "ratio": 0.31128318584070797,
+        "timestamp": "2026-02-12T11:58:31.252770Z"
+    },
+    {
+        "pull_value": "4.75",
+        "online_value": "209",
+        "ratio": 0.022727272727272728,
+        "timestamp": "2026-02-12T12:28:36.681590Z"
+    },
+    {
+        "pull_value": "6.52",
+        "online_value": "228",
+        "ratio": 0.028596491228070172,
+        "timestamp": "2026-02-12T12:58:29.328482Z"
+    },
+    {
+        "pull_value": "4.20",
+        "online_value": "230",
+        "ratio": 0.018260869565217393,
+        "timestamp": "2026-02-12T13:28:33.162802Z"
+    },
+    {
+        "pull_value": "4.75",
+        "online_value": "260",
+        "ratio": 0.01826923076923077,
+        "timestamp": "2026-02-12T13:58:23.980777Z"
+    },
+    {
+        "pull_value": "5.48",
+        "online_value": "293",
+        "ratio": 0.01870307167235495,
+        "timestamp": "2026-02-12T14:28:32.820595Z"
+    },
+    {
+        "pull_value": "10.",
+        "online_value": "310",
+        "ratio": 0.03225806451612903,
+        "timestamp": "2026-02-12T14:58:37.001845Z"
+    },
+    {
+        "pull_value": "9.64",
+        "online_value": "326",
+        "ratio": 0.029570552147239266,
+        "timestamp": "2026-02-12T15:28:41.479723Z"
+    },
+    {
+        "pull_value": "6.49",
+        "online_value": "320",
+        "ratio": 0.02028125,
+        "timestamp": "2026-02-12T15:58:59.510082Z"
+    },
+    {
+        "pull_value": "6.75",
+        "online_value": "321",
+        "ratio": 0.02102803738317757,
+        "timestamp": "2026-02-12T16:28:41.790451Z"
+    },
+    {
+        "pull_value": "4.79",
+        "online_value": "335",
+        "ratio": 0.014298507462686568,
+        "timestamp": "2026-02-12T16:58:27.273070Z"
+    },
+    {
+        "pull_value": "8.31",
+        "online_value": "342",
+        "ratio": 0.02429824561403509,
+        "timestamp": "2026-02-12T17:28:59.556952Z"
+    },
+    {
+        "pull_value": "6.69",
+        "online_value": "343",
+        "ratio": 0.019504373177842566,
+        "timestamp": "2026-02-12T17:58:34.956123Z"
+    },
+    {
+        "pull_value": "6.57",
+        "online_value": "356",
+        "ratio": 0.018455056179775282,
+        "timestamp": "2026-02-12T18:29:10.701671Z"
+    },
+    {
+        "pull_value": "9.15",
+        "online_value": "357",
+        "ratio": 0.02563025210084034,
+        "timestamp": "2026-02-12T18:59:10.459471Z"
+    },
+    {
+        "pull_value": "6.21",
+        "online_value": "343",
+        "ratio": 0.018104956268221575,
+        "timestamp": "2026-02-12T19:28:28.737781Z"
+    },
+    {
+        "pull_value": "6.68",
+        "online_value": "367",
+        "ratio": 0.018201634877384194,
+        "timestamp": "2026-02-12T19:59:02.038534Z"
+    },
+    {
+        "pull_value": "8.67",
+        "online_value": "372",
+        "ratio": 0.023306451612903227,
+        "timestamp": "2026-02-12T20:28:24.485859Z"
+    },
+    {
+        "pull_value": "7.44",
+        "online_value": "371",
+        "ratio": 0.02005390835579515,
+        "timestamp": "2026-02-12T20:58:32.773330Z"
+    },
+    {
+        "pull_value": "12.85",
+        "online_value": "365",
+        "ratio": 0.035205479452054794,
+        "timestamp": "2026-02-12T21:28:35.188670Z"
+    },
+    {
+        "pull_value": "13.58",
+        "online_value": "370",
+        "ratio": 0.036702702702702705,
+        "timestamp": "2026-02-12T21:58:32.308236Z"
+    },
+    {
+        "pull_value": "27.31",
+        "online_value": "374",
+        "ratio": 0.07302139037433154,
+        "timestamp": "2026-02-12T22:28:50.136748Z"
+    },
+    {
+        "pull_value": "4.92",
+        "online_value": "383",
+        "ratio": 0.012845953002610965,
+        "timestamp": "2026-02-12T22:58:37.327806Z"
+    },
+    {
+        "pull_value": "11.73",
+        "online_value": "408",
+        "ratio": 0.02875,
+        "timestamp": "2026-02-12T23:28:32.155230Z"
+    },
+    {
+        "pull_value": "12.7",
+        "online_value": "422",
+        "ratio": 0.03009478672985782,
+        "timestamp": "2026-02-12T23:58:37.200241Z"
+    },
+    {
+        "pull_value": "37.21",
+        "online_value": "502",
+        "ratio": 0.07412350597609561,
+        "timestamp": "2026-02-13T00:28:35.436248Z"
+    },
+    {
+        "pull_value": "31.19",
+        "online_value": "499",
+        "ratio": 0.06250501002004008,
+        "timestamp": "2026-02-13T00:58:33.841019Z"
+    },
+    {
+        "pull_value": "29.71",
+        "online_value": "489",
+        "ratio": 0.06075664621676892,
+        "timestamp": "2026-02-13T01:28:31.559513Z"
+    },
+    {
+        "pull_value": "37.36",
+        "online_value": "526",
+        "ratio": 0.07102661596958175,
+        "timestamp": "2026-02-13T01:58:30.675418Z"
+    },
+    {
+        "pull_value": "25.3",
+        "online_value": "515",
+        "ratio": 0.049126213592233015,
+        "timestamp": "2026-02-13T02:28:37.403581Z"
+    },
+    {
+        "pull_value": "16.5",
+        "online_value": "482",
+        "ratio": 0.03423236514522822,
+        "timestamp": "2026-02-13T02:58:37.214085Z"
+    },
+    {
+        "pull_value": "25.72",
+        "online_value": "478",
+        "ratio": 0.053807531380753136,
+        "timestamp": "2026-02-13T03:28:24.612474Z"
+    },
+    {
+        "pull_value": "18.17",
+        "online_value": "466",
+        "ratio": 0.03899141630901288,
+        "timestamp": "2026-02-13T03:58:32.300040Z"
+    },
+    {
+        "pull_value": "14.58",
+        "online_value": "449",
+        "ratio": 0.03247216035634744,
+        "timestamp": "2026-02-13T04:28:36.408788Z"
+    },
+    {
+        "pull_value": "38.39",
+        "online_value": "421",
+        "ratio": 0.09118764845605701,
+        "timestamp": "2026-02-13T04:58:32.761438Z"
+    },
+    {
+        "pull_value": "27.80",
+        "online_value": "392",
+        "ratio": 0.07091836734693878,
+        "timestamp": "2026-02-13T05:28:31.975052Z"
+    },
+    {
+        "pull_value": "11.30",
+        "online_value": "346",
+        "ratio": 0.03265895953757226,
+        "timestamp": "2026-02-13T05:58:32.117996Z"
+    },
+    {
+        "pull_value": "9.46",
+        "online_value": "324",
+        "ratio": 0.029197530864197532,
+        "timestamp": "2026-02-13T06:28:31.533039Z"
+    },
+    {
+        "pull_value": "9.14",
+        "online_value": "298",
+        "ratio": 0.030671140939597316,
+        "timestamp": "2026-02-13T06:58:35.375535Z"
+    },
+    {
+        "pull_value": "10.93",
+        "online_value": "285",
+        "ratio": 0.038350877192982455,
+        "timestamp": "2026-02-13T07:28:32.156497Z"
+    },
+    {
+        "pull_value": "9.76",
+        "online_value": "265",
+        "ratio": 0.036830188679245285,
+        "timestamp": "2026-02-13T07:58:34.010489Z"
+    },
+    {
+        "pull_value": "5.80",
+        "online_value": "254",
+        "ratio": 0.02283464566929134,
+        "timestamp": "2026-02-13T08:28:31.544231Z"
+    },
+    {
+        "pull_value": "7.89",
+        "online_value": "248",
+        "ratio": 0.03181451612903226,
+        "timestamp": "2026-02-13T08:58:28.829860Z"
+    },
+    {
+        "pull_value": "8.77",
+        "online_value": "242",
+        "ratio": 0.036239669421487604,
+        "timestamp": "2026-02-13T09:28:34.086975Z"
+    },
+    {
+        "pull_value": "13.64",
+        "online_value": "233",
+        "ratio": 0.058540772532188846,
+        "timestamp": "2026-02-13T09:58:34.814469Z"
+    },
+    {
+        "pull_value": "7.91",
+        "online_value": "220",
+        "ratio": 0.035954545454545454,
+        "timestamp": "2026-02-13T10:28:38.643729Z"
+    },
+    {
+        "pull_value": "10.80",
+        "online_value": "217",
+        "ratio": 0.049769585253456226,
+        "timestamp": "2026-02-13T10:58:35.849852Z"
+    },
+    {
+        "pull_value": "8.02",
+        "online_value": "205",
+        "ratio": 0.039121951219512195,
+        "timestamp": "2026-02-13T11:28:32.613828Z"
+    },
+    {
+        "pull_value": "8.89",
+        "online_value": "209",
+        "ratio": 0.042535885167464114,
+        "timestamp": "2026-02-13T11:58:35.434073Z"
+    },
+    {
+        "pull_value": "7.80",
+        "online_value": "214",
+        "ratio": 0.03644859813084112,
+        "timestamp": "2026-02-13T12:28:33.717776Z"
+    },
+    {
+        "pull_value": "7.86",
+        "online_value": "219",
+        "ratio": 0.03589041095890411,
+        "timestamp": "2026-02-13T12:58:30.946373Z"
+    },
+    {
+        "pull_value": "9.15",
+        "online_value": "238",
+        "ratio": 0.038445378151260506,
+        "timestamp": "2026-02-13T13:28:34.949528Z"
+    },
+    {
+        "pull_value": "9.67",
+        "online_value": "246",
+        "ratio": 0.03930894308943089,
+        "timestamp": "2026-02-13T13:58:34.467358Z"
+    },
+    {
+        "pull_value": "9.29",
+        "online_value": "277",
+        "ratio": 0.03353790613718411,
+        "timestamp": "2026-02-13T14:28:26.834289Z"
+    },
+    {
+        "pull_value": "3.83",
+        "online_value": "281",
+        "ratio": 0.013629893238434164,
+        "timestamp": "2026-02-13T14:58:35.256061Z"
+    },
+    {
+        "pull_value": "3.87",
+        "online_value": "300",
+        "ratio": 0.0129,
+        "timestamp": "2026-02-13T15:28:36.721233Z"
+    },
+    {
+        "pull_value": "9.53",
+        "online_value": "309",
+        "ratio": 0.03084142394822006,
+        "timestamp": "2026-02-13T15:58:35.244458Z"
+    },
+    {
+        "pull_value": "11.30",
+        "online_value": "319",
+        "ratio": 0.03542319749216301,
+        "timestamp": "2026-02-13T16:28:54.523038Z"
+    },
+    {
+        "pull_value": "6.92",
+        "online_value": "341",
+        "ratio": 0.02029325513196481,
+        "timestamp": "2026-02-13T16:58:36.185473Z"
+    },
+    {
+        "pull_value": "4.14",
+        "online_value": "330",
+        "ratio": 0.012545454545454544,
+        "timestamp": "2026-02-13T17:28:41.774354Z"
+    },
+    {
+        "pull_value": "4.09",
+        "online_value": "343",
+        "ratio": 0.011924198250728862,
+        "timestamp": "2026-02-13T17:58:32.033971Z"
+    },
+    {
+        "pull_value": "4.52",
+        "online_value": "348",
+        "ratio": 0.012988505747126436,
+        "timestamp": "2026-02-13T18:28:30.566784Z"
+    },
+    {
+        "pull_value": "4.92",
+        "online_value": "359",
+        "ratio": 0.013704735376044568,
+        "timestamp": "2026-02-13T18:59:03.909077Z"
+    },
+    {
+        "pull_value": "11.80",
+        "online_value": "366",
+        "ratio": 0.03224043715846995,
+        "timestamp": "2026-02-13T19:29:02.150738Z"
+    },
+    {
+        "pull_value": "5.84",
+        "online_value": "356",
+        "ratio": 0.01640449438202247,
+        "timestamp": "2026-02-13T19:58:33.977567Z"
+    },
+    {
+        "pull_value": "5.13",
+        "online_value": "353",
+        "ratio": 0.014532577903682719,
+        "timestamp": "2026-02-13T20:28:56.369878Z"
+    },
+    {
+        "pull_value": "6.63",
+        "online_value": "371",
+        "ratio": 0.017870619946091643,
+        "timestamp": "2026-02-13T20:58:49.330200Z"
+    },
+    {
+        "pull_value": "6.67",
+        "online_value": "372",
+        "ratio": 0.01793010752688172,
+        "timestamp": "2026-02-13T21:28:34.345227Z"
+    },
+    {
+        "pull_value": "11.76",
+        "online_value": "359",
+        "ratio": 0.03275766016713092,
+        "timestamp": "2026-02-13T21:58:52.643642Z"
+    },
+    {
+        "pull_value": "13.1",
+        "online_value": "367",
+        "ratio": 0.03569482288828338,
+        "timestamp": "2026-02-13T22:28:44.092392Z"
+    },
+    {
+        "pull_value": "10.80",
+        "online_value": "365",
+        "ratio": 0.029589041095890414,
+        "timestamp": "2026-02-13T22:58:31.365845Z"
+    },
+    {
+        "pull_value": "12.11",
+        "online_value": "392",
+        "ratio": 0.030892857142857142,
+        "timestamp": "2026-02-13T23:28:31.225723Z"
+    },
+    {
+        "pull_value": "14.21",
+        "online_value": "423",
+        "ratio": 0.03359338061465721,
+        "timestamp": "2026-02-13T23:58:33.704546Z"
+    },
+    {
+        "pull_value": "26.6",
+        "online_value": "473",
+        "ratio": 0.05623678646934461,
+        "timestamp": "2026-02-14T00:28:32.874801Z"
+    },
+    {
+        "pull_value": "19.18",
+        "online_value": "464",
+        "ratio": 0.04133620689655172,
+        "timestamp": "2026-02-14T00:58:38.111488Z"
+    },
+    {
+        "pull_value": "23.77",
+        "online_value": "470",
+        "ratio": 0.050574468085106385,
+        "timestamp": "2026-02-14T01:28:35.031503Z"
+    },
+    {
+        "pull_value": "26.54",
+        "online_value": "466",
+        "ratio": 0.056952789699570815,
+        "timestamp": "2026-02-14T01:58:29.782252Z"
+    },
+    {
+        "pull_value": "35.75",
+        "online_value": "462",
+        "ratio": 0.07738095238095238,
+        "timestamp": "2026-02-14T02:28:33.105329Z"
+    },
+    {
+        "pull_value": "24.25",
+        "online_value": "457",
+        "ratio": 0.05306345733041575,
+        "timestamp": "2026-02-14T02:58:34.409541Z"
+    },
+    {
+        "pull_value": "14.86",
+        "online_value": "440",
+        "ratio": 0.033772727272727274,
+        "timestamp": "2026-02-14T03:28:46.582100Z"
+    },
+    {
+        "pull_value": "25.36",
+        "online_value": "467",
+        "ratio": 0.05430406852248394,
+        "timestamp": "2026-02-14T03:58:33.492627Z"
+    },
+    {
+        "pull_value": "24.0",
+        "online_value": "448",
+        "ratio": 0.05357142857142857,
+        "timestamp": "2026-02-14T04:28:34.572517Z"
+    },
+    {
+        "pull_value": "21.58",
+        "online_value": "421",
+        "ratio": 0.051258907363420425,
+        "timestamp": "2026-02-14T04:58:38.256815Z"
+    },
+    {
+        "pull_value": "8.17",
+        "online_value": "392",
+        "ratio": 0.020841836734693878,
+        "timestamp": "2026-02-14T05:28:31.039547Z"
+    },
+    {
+        "pull_value": "13.80",
+        "online_value": "376",
+        "ratio": 0.03670212765957447,
+        "timestamp": "2026-02-14T05:58:33.199474Z"
+    },
+    {
+        "pull_value": "11.80",
+        "online_value": "334",
+        "ratio": 0.03532934131736527,
+        "timestamp": "2026-02-14T06:28:35.408211Z"
+    },
+    {
+        "pull_value": "12.42",
+        "online_value": "318",
+        "ratio": 0.03905660377358491,
+        "timestamp": "2026-02-14T06:58:44.979324Z"
+    },
+    {
+        "pull_value": "7.94",
+        "online_value": "288",
+        "ratio": 0.027569444444444445,
+        "timestamp": "2026-02-14T07:28:37.301146Z"
+    },
+    {
+        "pull_value": "5.77",
+        "online_value": "278",
+        "ratio": 0.020755395683453234,
+        "timestamp": "2026-02-14T07:58:22.959457Z"
+    },
+    {
+        "pull_value": "5.99",
+        "online_value": "262",
+        "ratio": 0.02286259541984733,
+        "timestamp": "2026-02-14T08:28:31.523255Z"
+    },
+    {
+        "pull_value": "6.35",
+        "online_value": "251",
+        "ratio": 0.025298804780876493,
+        "timestamp": "2026-02-14T08:58:29.197462Z"
+    },
+    {
+        "pull_value": "5.10",
+        "online_value": "223",
+        "ratio": 0.022869955156950672,
+        "timestamp": "2026-02-14T09:28:41.202209Z"
+    },
+    {
+        "pull_value": "7.53",
+        "online_value": "213",
+        "ratio": 0.03535211267605634,
+        "timestamp": "2026-02-14T09:58:31.108530Z"
+    },
+    {
+        "pull_value": "22.57",
+        "online_value": "207",
+        "ratio": 0.10903381642512078,
+        "timestamp": "2026-02-14T10:28:29.732416Z"
+    },
+    {
+        "pull_value": "8.19",
+        "online_value": "204",
+        "ratio": 0.04014705882352941,
+        "timestamp": "2026-02-14T10:58:34.164705Z"
+    },
+    {
+        "pull_value": "5.92",
+        "online_value": "191",
+        "ratio": 0.030994764397905758,
+        "timestamp": "2026-02-14T11:28:29.187266Z"
+    },
+    {
+        "pull_value": "4.00",
+        "online_value": "200",
+        "ratio": 0.02,
+        "timestamp": "2026-02-14T11:58:35.384034Z"
+    },
+    {
+        "pull_value": "5.31",
+        "online_value": "185",
+        "ratio": 0.0287027027027027,
+        "timestamp": "2026-02-14T12:28:23.437280Z"
+    },
+    {
+        "pull_value": "3.76",
+        "online_value": "204",
+        "ratio": 0.018431372549019606,
+        "timestamp": "2026-02-14T12:58:32.222880Z"
+    },
+    {
+        "pull_value": "3.84",
+        "online_value": "218",
+        "ratio": 0.017614678899082567,
+        "timestamp": "2026-02-14T13:28:33.072126Z"
+    },
+    {
+        "pull_value": "6.89",
+        "online_value": "206",
+        "ratio": 0.03344660194174757,
+        "timestamp": "2026-02-14T13:58:30.709937Z"
+    },
+    {
+        "pull_value": "4.03",
+        "online_value": "218",
+        "ratio": 0.018486238532110094,
+        "timestamp": "2026-02-14T14:28:35.041788Z"
+    },
+    {
+        "pull_value": "4.96",
+        "online_value": "242",
+        "ratio": 0.020495867768595043,
+        "timestamp": "2026-02-14T14:58:38.265205Z"
+    },
+    {
+        "pull_value": "6.62",
+        "online_value": "250",
+        "ratio": 0.02648,
+        "timestamp": "2026-02-14T15:28:33.409265Z"
+    },
+    {
+        "pull_value": "15.42",
+        "online_value": "283",
+        "ratio": 0.05448763250883392,
+        "timestamp": "2026-02-14T15:58:48.596458Z"
+    },
+    {
+        "pull_value": "7.",
+        "online_value": "286",
+        "ratio": 0.024475524475524476,
+        "timestamp": "2026-02-14T16:28:33.537205Z"
+    },
+    {
+        "pull_value": "10.95",
+        "online_value": "296",
+        "ratio": 0.03699324324324324,
+        "timestamp": "2026-02-14T16:58:32.986784Z"
+    },
+    {
+        "pull_value": "8.02",
+        "online_value": "307",
+        "ratio": 0.026123778501628662,
+        "timestamp": "2026-02-14T17:28:28.677895Z"
+    },
+    {
+        "pull_value": "4.76",
+        "online_value": "324",
+        "ratio": 0.014691358024691358,
+        "timestamp": "2026-02-14T17:58:24.479253Z"
+    },
+    {
+        "pull_value": "8.92",
+        "online_value": "328",
+        "ratio": 0.027195121951219512,
+        "timestamp": "2026-02-14T18:28:31.143900Z"
+    },
+    {
+        "pull_value": "9.00",
+        "online_value": "339",
+        "ratio": 0.02654867256637168,
+        "timestamp": "2026-02-14T18:58:29.510857Z"
+    },
+    {
+        "pull_value": "6.24",
+        "online_value": "344",
+        "ratio": 0.018139534883720932,
+        "timestamp": "2026-02-14T19:28:27.631032Z"
+    },
+    {
+        "pull_value": "5.83",
+        "online_value": "346",
+        "ratio": 0.016849710982658958,
+        "timestamp": "2026-02-14T19:58:23.063028Z"
+    },
+    {
+        "pull_value": "8.14",
+        "online_value": "352",
+        "ratio": 0.023125000000000003,
+        "timestamp": "2026-02-14T20:28:20.337130Z"
+    },
+    {
+        "pull_value": "7.09",
+        "online_value": "358",
+        "ratio": 0.019804469273743016,
+        "timestamp": "2026-02-14T20:58:47.383669Z"
+    },
+    {
+        "pull_value": "15.40",
+        "online_value": "356",
+        "ratio": 0.04325842696629214,
+        "timestamp": "2026-02-14T21:28:25.043563Z"
+    },
+    {
+        "pull_value": "7.19",
+        "online_value": "360",
+        "ratio": 0.019972222222222225,
+        "timestamp": "2026-02-14T21:58:40.261567Z"
+    },
+    {
+        "pull_value": "4.76",
+        "online_value": "360",
+        "ratio": 0.013222222222222222,
+        "timestamp": "2026-02-14T22:28:31.696224Z"
+    },
+    {
+        "pull_value": "5.32",
+        "online_value": "372",
+        "ratio": 0.014301075268817205,
+        "timestamp": "2026-02-14T22:58:30.033369Z"
+    },
+    {
+        "pull_value": "4.79",
+        "online_value": "390",
+        "ratio": 0.012282051282051282,
+        "timestamp": "2026-02-14T23:28:34.018718Z"
+    },
+    {
+        "pull_value": "6.52",
+        "online_value": "399",
+        "ratio": 0.016340852130325812,
+        "timestamp": "2026-02-14T23:58:24.028469Z"
+    },
+    {
+        "pull_value": "16.94",
+        "online_value": "440",
+        "ratio": 0.0385,
+        "timestamp": "2026-02-15T00:28:34.662389Z"
+    },
+    {
+        "pull_value": "10.81",
+        "online_value": "450",
+        "ratio": 0.024022222222222223,
+        "timestamp": "2026-02-15T00:58:39.956256Z"
+    },
+    {
+        "pull_value": "16.76",
+        "online_value": "461",
+        "ratio": 0.03635574837310195,
+        "timestamp": "2026-02-15T01:28:33.200192Z"
+    },
+    {
+        "pull_value": "16.66",
+        "online_value": "439",
+        "ratio": 0.0379498861047836,
+        "timestamp": "2026-02-15T01:58:32.543482Z"
+    },
+    {
+        "pull_value": "15.33",
+        "online_value": "422",
+        "ratio": 0.036327014218009476,
+        "timestamp": "2026-02-15T02:28:23.177212Z"
+    },
+    {
+        "pull_value": "11.45",
+        "online_value": "441",
+        "ratio": 0.025963718820861677,
+        "timestamp": "2026-02-15T02:58:53.733991Z"
+    },
+    {
+        "pull_value": "11.82",
+        "online_value": "425",
+        "ratio": 0.027811764705882355,
+        "timestamp": "2026-02-15T03:28:31.869787Z"
+    },
+    {
+        "pull_value": "12.81",
+        "online_value": "412",
+        "ratio": 0.031092233009708738,
+        "timestamp": "2026-02-15T03:58:32.310936Z"
+    },
+    {
+        "pull_value": "12.92",
+        "online_value": "395",
+        "ratio": 0.03270886075949367,
+        "timestamp": "2026-02-15T04:28:30.418600Z"
+    },
+    {
+        "pull_value": "16.87",
+        "online_value": "392",
+        "ratio": 0.04303571428571429,
+        "timestamp": "2026-02-15T04:58:32.369535Z"
+    },
+    {
+        "pull_value": "5.85",
+        "online_value": "370",
+        "ratio": 0.01581081081081081,
+        "timestamp": "2026-02-15T05:28:30.440247Z"
+    },
+    {
+        "pull_value": "9.00",
+        "online_value": "356",
+        "ratio": 0.025280898876404494,
+        "timestamp": "2026-02-15T05:58:33.183385Z"
+    },
+    {
+        "pull_value": "8.01",
+        "online_value": "330",
+        "ratio": 0.024272727272727272,
+        "timestamp": "2026-02-15T06:28:30.434666Z"
+    },
+    {
+        "pull_value": "17.",
+        "online_value": "301",
+        "ratio": 0.05647840531561462,
+        "timestamp": "2026-02-15T06:58:29.676989Z"
+    },
+    {
+        "pull_value": "16.47",
+        "online_value": "281",
+        "ratio": 0.05861209964412811,
+        "timestamp": "2026-02-15T07:28:29.775074Z"
+    },
+    {
+        "pull_value": "9.21",
+        "online_value": "275",
+        "ratio": 0.03349090909090909,
+        "timestamp": "2026-02-15T07:58:33.324571Z"
+    },
+    {
+        "pull_value": "13.19",
+        "online_value": "259",
+        "ratio": 0.050926640926640926,
+        "timestamp": "2026-02-15T08:28:31.587181Z"
+    },
+    {
+        "pull_value": "5.93",
+        "online_value": "248",
+        "ratio": 0.023911290322580644,
+        "timestamp": "2026-02-15T08:58:20.525711Z"
+    },
+    {
+        "pull_value": "6.39",
+        "online_value": "217",
+        "ratio": 0.02944700460829493,
+        "timestamp": "2026-02-15T09:28:22.393005Z"
+    },
+    {
+        "pull_value": "4.91",
+        "online_value": "214",
+        "ratio": 0.02294392523364486,
+        "timestamp": "2026-02-15T09:58:22.523636Z"
+    },
+    {
+        "pull_value": "8.95",
+        "online_value": "203",
+        "ratio": 0.044088669950738915,
+        "timestamp": "2026-02-15T10:28:34.688516Z"
+    },
+    {
+        "pull_value": "7.09",
+        "online_value": "198",
+        "ratio": 0.03580808080808081,
+        "timestamp": "2026-02-15T10:58:32.826358Z"
+    },
+    {
+        "pull_value": "4.24",
+        "online_value": "196",
+        "ratio": 0.021632653061224492,
+        "timestamp": "2026-02-15T11:28:31.637163Z"
+    },
+    {
+        "pull_value": "4.47",
+        "online_value": "202",
+        "ratio": 0.022128712871287128,
+        "timestamp": "2026-02-15T11:58:32.992986Z"
+    },
+    {
+        "pull_value": "3.73",
+        "online_value": "189",
+        "ratio": 0.019735449735449734,
+        "timestamp": "2026-02-15T12:28:23.283923Z"
+    },
+    {
+        "pull_value": "4.85",
+        "online_value": "183",
+        "ratio": 0.026502732240437157,
+        "timestamp": "2026-02-15T12:58:29.751237Z"
+    },
+    {
+        "pull_value": "7.6",
+        "online_value": "205",
+        "ratio": 0.037073170731707315,
+        "timestamp": "2026-02-15T13:28:32.976651Z"
+    },
+    {
+        "pull_value": "6.03",
+        "online_value": "225",
+        "ratio": 0.0268,
+        "timestamp": "2026-02-15T13:58:27.721044Z"
+    },
+    {
+        "pull_value": "5.17",
+        "online_value": "242",
+        "ratio": 0.021363636363636362,
+        "timestamp": "2026-02-15T14:28:51.869844Z"
+    },
+    {
+        "pull_value": "4.17",
+        "online_value": "250",
+        "ratio": 0.01668,
+        "timestamp": "2026-02-15T14:58:35.381850Z"
+    },
+    {
+        "pull_value": "4.18",
+        "online_value": "249",
+        "ratio": 0.016787148594377507,
+        "timestamp": "2026-02-15T15:28:32.260678Z"
+    },
+    {
+        "pull_value": "3.78",
+        "online_value": "284",
+        "ratio": 0.013309859154929576,
+        "timestamp": "2026-02-15T15:58:36.422353Z"
+    },
+    {
+        "pull_value": "3.87",
+        "online_value": "289",
+        "ratio": 0.013391003460207614,
+        "timestamp": "2026-02-15T16:28:32.973889Z"
+    },
+    {
+        "pull_value": "3.93",
+        "online_value": "308",
+        "ratio": 0.012759740259740261,
+        "timestamp": "2026-02-15T16:58:33.236524Z"
+    },
+    {
+        "pull_value": "9.7",
+        "online_value": "311",
+        "ratio": 0.031189710610932474,
+        "timestamp": "2026-02-15T17:28:31.273462Z"
+    },
+    {
+        "pull_value": "8.10",
+        "online_value": "313",
+        "ratio": 0.025878594249201275,
+        "timestamp": "2026-02-15T17:58:29.060694Z"
+    },
+    {
+        "pull_value": "9.18",
+        "online_value": "336",
+        "ratio": 0.02732142857142857,
+        "timestamp": "2026-02-15T18:28:26.130958Z"
+    },
+    {
+        "pull_value": "4.35",
+        "online_value": "346",
+        "ratio": 0.012572254335260115,
+        "timestamp": "2026-02-15T18:58:32.996903Z"
+    },
+    {
+        "pull_value": "9.45",
+        "online_value": "364",
+        "ratio": 0.02596153846153846,
+        "timestamp": "2026-02-15T19:28:38.270899Z"
+    },
+    {
+        "pull_value": "10.00",
+        "online_value": "375",
+        "ratio": 0.02666666666666667,
+        "timestamp": "2026-02-15T19:58:25.377163Z"
+    },
+    {
+        "pull_value": "11.02",
+        "online_value": "374",
+        "ratio": 0.02946524064171123,
+        "timestamp": "2026-02-15T20:28:30.983086Z"
+    },
+    {
+        "pull_value": "4.75",
+        "online_value": "384",
+        "ratio": 0.012369791666666666,
+        "timestamp": "2026-02-15T20:58:25.140923Z"
+    },
+    {
+        "pull_value": "7.26",
+        "online_value": "380",
+        "ratio": 0.019105263157894736,
+        "timestamp": "2026-02-15T21:28:31.826338Z"
+    },
+    {
+        "pull_value": "14.87",
+        "online_value": "402",
+        "ratio": 0.03699004975124378,
+        "timestamp": "2026-02-15T21:58:30.299901Z"
+    },
+    {
+        "pull_value": "7.03",
+        "online_value": "412",
+        "ratio": 0.017063106796116504,
+        "timestamp": "2026-02-15T22:28:30.632126Z"
+    },
+    {
+        "pull_value": "6.46",
+        "online_value": "403",
+        "ratio": 0.016029776674937966,
+        "timestamp": "2026-02-15T22:58:27.792011Z"
+    },
+    {
+        "pull_value": "8.74",
+        "online_value": "416",
+        "ratio": 0.021009615384615384,
+        "timestamp": "2026-02-15T23:28:25.253026Z"
+    },
+    {
+        "pull_value": "8.47",
+        "online_value": "450",
+        "ratio": 0.018822222222222223,
+        "timestamp": "2026-02-15T23:58:35.818522Z"
+    },
+    {
+        "pull_value": "16.40",
+        "online_value": "508",
+        "ratio": 0.03228346456692913,
+        "timestamp": "2026-02-16T00:28:32.909358Z"
+    },
+    {
+        "pull_value": "24.52",
+        "online_value": "488",
+        "ratio": 0.05024590163934426,
+        "timestamp": "2026-02-16T00:58:59.797780Z"
+    },
+    {
+        "pull_value": "22.96",
+        "online_value": "487",
+        "ratio": 0.047145790554414785,
+        "timestamp": "2026-02-16T01:28:30.863757Z"
+    },
+    {
+        "pull_value": "13.07",
+        "online_value": "474",
+        "ratio": 0.02757383966244726,
+        "timestamp": "2026-02-16T01:58:32.351044Z"
+    },
+    {
+        "pull_value": "13.84",
+        "online_value": "480",
+        "ratio": 0.028833333333333332,
+        "timestamp": "2026-02-16T02:28:29.812074Z"
+    },
+    {
+        "pull_value": "12.80",
+        "online_value": "482",
+        "ratio": 0.026556016597510376,
+        "timestamp": "2026-02-16T02:58:35.664848Z"
+    },
+    {
+        "pull_value": "19.43",
+        "online_value": "472",
+        "ratio": 0.04116525423728813,
+        "timestamp": "2026-02-16T03:28:35.730299Z"
+    },
+    {
+        "pull_value": "10.82",
+        "online_value": "455",
+        "ratio": 0.02378021978021978,
+        "timestamp": "2026-02-16T03:58:34.439026Z"
+    },
+    {
+        "pull_value": "16.13",
+        "online_value": "427",
+        "ratio": 0.0377751756440281,
+        "timestamp": "2026-02-16T04:28:26.301080Z"
+    },
+    {
+        "pull_value": "10.66",
+        "online_value": "404",
+        "ratio": 0.026386138613861385,
+        "timestamp": "2026-02-16T04:58:31.465116Z"
+    },
+    {
+        "pull_value": "6.32",
+        "online_value": "358",
+        "ratio": 0.0176536312849162,
+        "timestamp": "2026-02-16T05:28:32.113585Z"
+    },
+    {
+        "pull_value": "6.90",
+        "online_value": "355",
+        "ratio": 0.01943661971830986,
+        "timestamp": "2026-02-16T05:58:33.017317Z"
+    },
+    {
+        "pull_value": "8.2",
+        "online_value": "327",
+        "ratio": 0.02507645259938838,
+        "timestamp": "2026-02-16T06:28:32.763422Z"
+    },
+    {
+        "pull_value": "10.69",
+        "online_value": "308",
+        "ratio": 0.03470779220779221,
+        "timestamp": "2026-02-16T06:58:31.545593Z"
+    },
+    {
+        "pull_value": "10.85",
+        "online_value": "279",
+        "ratio": 0.03888888888888889,
+        "timestamp": "2026-02-16T07:28:37.168416Z"
+    },
+    {
+        "pull_value": "6.62",
+        "online_value": "269",
+        "ratio": 0.024609665427509295,
+        "timestamp": "2026-02-16T07:58:30.148504Z"
+    },
+    {
+        "pull_value": "7.26",
+        "online_value": "260",
+        "ratio": 0.027923076923076922,
+        "timestamp": "2026-02-16T08:28:33.982383Z"
+    },
+    {
+        "pull_value": "7.72",
+        "online_value": "244",
+        "ratio": 0.03163934426229508,
+        "timestamp": "2026-02-16T08:58:32.459553Z"
+    },
+    {
+        "pull_value": "7.53",
+        "online_value": "232",
+        "ratio": 0.03245689655172414,
+        "timestamp": "2026-02-16T09:28:36.263215Z"
+    },
+    {
+        "pull_value": "6.55",
+        "online_value": "211",
+        "ratio": 0.031042654028436017,
+        "timestamp": "2026-02-16T09:58:33.544898Z"
+    },
+    {
+        "pull_value": "9.44",
+        "online_value": "212",
+        "ratio": 0.04452830188679245,
+        "timestamp": "2026-02-16T10:28:25.119442Z"
+    },
+    {
+        "pull_value": "6.19",
+        "online_value": "206",
+        "ratio": 0.03004854368932039,
+        "timestamp": "2026-02-16T10:58:34.426171Z"
+    },
+    {
+        "pull_value": "4.16",
+        "online_value": "212",
+        "ratio": 0.019622641509433963,
+        "timestamp": "2026-02-16T11:28:30.764847Z"
+    },
+    {
+        "pull_value": "4.20",
+        "online_value": "215",
+        "ratio": 0.019534883720930235,
+        "timestamp": "2026-02-16T11:58:31.031111Z"
+    },
+    {
+        "pull_value": "6.09",
+        "online_value": "206",
+        "ratio": 0.029563106796116505,
+        "timestamp": "2026-02-16T12:28:24.815555Z"
+    },
+    {
+        "pull_value": "3.85",
+        "online_value": "217",
+        "ratio": 0.017741935483870968,
+        "timestamp": "2026-02-16T12:58:33.236795Z"
+    },
+    {
+        "pull_value": "4.53",
+        "online_value": "245",
+        "ratio": 0.018489795918367347,
+        "timestamp": "2026-02-16T13:28:30.185445Z"
+    },
+    {
+        "pull_value": "4.48",
+        "online_value": "266",
+        "ratio": 0.016842105263157898,
+        "timestamp": "2026-02-16T13:58:34.646404Z"
+    },
+    {
+        "pull_value": "4.46",
+        "online_value": "275",
+        "ratio": 0.01621818181818182,
+        "timestamp": "2026-02-16T14:28:34.461898Z"
+    },
+    {
+        "pull_value": "5.48",
+        "online_value": "284",
+        "ratio": 0.019295774647887325,
+        "timestamp": "2026-02-16T14:58:29.397186Z"
+    },
+    {
+        "pull_value": "5.01",
+        "online_value": "287",
+        "ratio": 0.01745644599303136,
+        "timestamp": "2026-02-16T15:28:29.184826Z"
+    },
+    {
+        "pull_value": "4.65",
+        "online_value": "307",
+        "ratio": 0.015146579804560262,
+        "timestamp": "2026-02-16T15:58:30.951092Z"
+    },
+    {
+        "pull_value": "5.95",
+        "online_value": "304",
+        "ratio": 0.019572368421052633,
+        "timestamp": "2026-02-16T16:28:30.598053Z"
+    },
+    {
+        "pull_value": "5.17",
+        "online_value": "327",
+        "ratio": 0.01581039755351682,
+        "timestamp": "2026-02-16T16:58:37.697579Z"
+    },
+    {
+        "pull_value": "11.56",
+        "online_value": "348",
+        "ratio": 0.0332183908045977,
+        "timestamp": "2026-02-16T17:28:34.708563Z"
+    },
+    {
+        "pull_value": "11.73",
+        "online_value": "366",
+        "ratio": 0.032049180327868854,
+        "timestamp": "2026-02-16T17:58:33.062037Z"
+    },
+    {
+        "pull_value": "18.05",
+        "online_value": "388",
+        "ratio": 0.04652061855670103,
+        "timestamp": "2026-02-16T18:28:45.309307Z"
+    },
+    {
+        "pull_value": "10.18",
+        "online_value": "383",
+        "ratio": 0.026579634464751957,
+        "timestamp": "2026-02-16T18:58:29.501780Z"
+    },
+    {
+        "pull_value": "7.65",
+        "online_value": "389",
+        "ratio": 0.01966580976863753,
+        "timestamp": "2026-02-16T19:28:35.128236Z"
+    },
+    {
+        "pull_value": "4.66",
+        "online_value": "373",
+        "ratio": 0.012493297587131368,
+        "timestamp": "2026-02-16T19:58:28.980998Z"
+    },
+    {
+        "pull_value": "8.40",
+        "online_value": "389",
+        "ratio": 0.021593830334190232,
+        "timestamp": "2026-02-16T20:28:30.937847Z"
+    },
+    {
+        "pull_value": "14.24",
+        "online_value": "402",
+        "ratio": 0.0354228855721393,
+        "timestamp": "2026-02-16T20:58:33.201981Z"
+    },
+    {
+        "pull_value": "8.75",
+        "online_value": "376",
+        "ratio": 0.02327127659574468,
+        "timestamp": "2026-02-16T21:28:32.768305Z"
+    },
+    {
+        "pull_value": "5.92",
+        "online_value": "402",
+        "ratio": 0.01472636815920398,
+        "timestamp": "2026-02-16T21:58:22.748361Z"
+    },
+    {
+        "pull_value": "6.23",
+        "online_value": "379",
+        "ratio": 0.016437994722955145,
+        "timestamp": "2026-02-16T22:28:27.578681Z"
+    },
+    {
+        "pull_value": "8.42",
+        "online_value": "403",
+        "ratio": 0.020893300248138957,
+        "timestamp": "2026-02-16T22:58:26.745302Z"
+    },
+    {
+        "pull_value": "6.32",
+        "online_value": "410",
+        "ratio": 0.015414634146341465,
+        "timestamp": "2026-02-16T23:28:27.622820Z"
+    },
+    {
+        "pull_value": "11.06",
+        "online_value": "437",
+        "ratio": 0.02530892448512586,
+        "timestamp": "2026-02-16T23:58:29.853459Z"
+    },
+    {
+        "pull_value": "39.",
+        "online_value": "505",
+        "ratio": 0.07722772277227723,
+        "timestamp": "2026-02-17T00:28:31.828224Z"
+    },
+    {
+        "pull_value": "15.92",
+        "online_value": "485",
+        "ratio": 0.03282474226804124,
+        "timestamp": "2026-02-17T00:58:30.220467Z"
+    },
+    {
+        "pull_value": "13.76",
+        "online_value": "497",
+        "ratio": 0.027686116700201206,
+        "timestamp": "2026-02-17T01:28:27.501105Z"
+    },
+    {
+        "pull_value": "19.14",
+        "online_value": "519",
+        "ratio": 0.03687861271676301,
+        "timestamp": "2026-02-17T01:58:30.083356Z"
+    },
+    {
+        "pull_value": "32.80",
+        "online_value": "499",
+        "ratio": 0.06573146292585169,
+        "timestamp": "2026-02-17T02:28:27.793754Z"
+    },
+    {
+        "pull_value": "19.17",
+        "online_value": "504",
+        "ratio": 0.03803571428571429,
+        "timestamp": "2026-02-17T02:58:26.597779Z"
+    },
+    {
+        "pull_value": "23.88",
+        "online_value": "486",
+        "ratio": 0.0491358024691358,
+        "timestamp": "2026-02-17T03:28:27.156594Z"
+    },
+    {
+        "pull_value": "25.53",
+        "online_value": "460",
+        "ratio": 0.0555,
+        "timestamp": "2026-02-17T03:58:30.839789Z"
+    },
+    {
+        "pull_value": "13.78",
+        "online_value": "402",
+        "ratio": 0.034278606965174124,
+        "timestamp": "2026-02-17T04:28:32.229152Z"
+    },
+    {
+        "pull_value": "10.",
+        "online_value": "411",
+        "ratio": 0.024330900243309004,
+        "timestamp": "2026-02-17T04:58:29.134426Z"
+    },
+    {
+        "pull_value": "12.2",
+        "online_value": "369",
+        "ratio": 0.033062330623306234,
+        "timestamp": "2026-02-17T05:28:36.526853Z"
+    },
+    {
+        "pull_value": "10.64",
+        "online_value": "342",
+        "ratio": 0.031111111111111114,
+        "timestamp": "2026-02-17T05:58:36.907044Z"
+    },
+    {
+        "pull_value": "5.2",
+        "online_value": "313",
+        "ratio": 0.016613418530351438,
+        "timestamp": "2026-02-17T06:28:32.719079Z"
+    },
+    {
+        "pull_value": "9.92",
+        "online_value": "306",
+        "ratio": 0.03241830065359477,
+        "timestamp": "2026-02-17T06:58:31.641634Z"
+    },
+    {
+        "pull_value": "7.",
+        "online_value": "269",
+        "ratio": 0.026022304832713755,
+        "timestamp": "2026-02-17T07:28:30.724096Z"
+    },
+    {
+        "pull_value": "6.36",
+        "online_value": "261",
+        "ratio": 0.024367816091954025,
+        "timestamp": "2026-02-17T07:58:23.082837Z"
+    },
+    {
+        "pull_value": "4.46",
+        "online_value": "240",
+        "ratio": 0.018583333333333334,
+        "timestamp": "2026-02-17T08:28:31.031516Z"
+    },
+    {
+        "pull_value": "5.55",
+        "online_value": "250",
+        "ratio": 0.0222,
+        "timestamp": "2026-02-17T08:58:33.226259Z"
+    },
+    {
+        "pull_value": "5.13",
+        "online_value": "232",
+        "ratio": 0.02211206896551724,
+        "timestamp": "2026-02-17T09:28:31.154375Z"
+    },
+    {
+        "pull_value": "4.20",
+        "online_value": "234",
+        "ratio": 0.01794871794871795,
+        "timestamp": "2026-02-17T09:58:32.547640Z"
+    },
+    {
+        "pull_value": "6.75",
+        "online_value": "215",
+        "ratio": 0.031395348837209305,
+        "timestamp": "2026-02-17T10:28:36.705528Z"
+    },
+    {
+        "pull_value": "11.",
+        "online_value": "209",
+        "ratio": 0.05263157894736842,
+        "timestamp": "2026-02-17T10:58:32.460102Z"
+    },
+    {
+        "pull_value": "72.89",
+        "online_value": "215",
+        "ratio": 0.3390232558139535,
+        "timestamp": "2026-02-17T11:28:31.987404Z"
+    },
+    {
+        "pull_value": "94.57",
+        "online_value": "243",
+        "ratio": 0.38917695473251024,
+        "timestamp": "2026-02-17T11:58:31.084197Z"
+    },
+    {
+        "pull_value": "59.34",
+        "online_value": "241",
+        "ratio": 0.24622406639004152,
+        "timestamp": "2026-02-17T12:28:32.104942Z"
+    },
+    {
+        "pull_value": "117.16",
+        "online_value": "272",
+        "ratio": 0.43073529411764705,
+        "timestamp": "2026-02-17T12:58:34.927601Z"
+    },
+    {
+        "pull_value": "176.63",
+        "online_value": "308",
+        "ratio": 0.573474025974026,
+        "timestamp": "2026-02-17T13:28:32.755039Z"
+    },
+    {
+        "pull_value": "100.71",
+        "online_value": "311",
+        "ratio": 0.3238263665594855,
+        "timestamp": "2026-02-17T13:58:34.253731Z"
     }
 ]
