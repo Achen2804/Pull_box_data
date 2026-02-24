@@ -6646,5 +6646,11 @@
         "online_value": "352",
         "ratio": 0.0271875,
         "timestamp": "2026-02-24T18:28:27.163503Z"
+    },
+    {
+        "pull_value": "5.11",
+        "online_value": "350",
+        "ratio": 0.0146,
+        "timestamp": "2026-02-24T18:58:31.461034Z"
     }
 ]
