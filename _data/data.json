@@ -28222,5 +28222,11 @@
         "online_value": "500",
         "ratio": 0.036,
         "timestamp": "2026-05-11T00:28:30.639254Z"
+    },
+    {
+        "pull_value": "21.44",
+        "online_value": "500",
+        "ratio": 0.04288,
+        "timestamp": "2026-05-11T00:58:31.412445Z"
     }
 ]
