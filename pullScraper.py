@@ -10,7 +10,9 @@ import os
 def initialize_driver(headless=True):
     options = Options()
     if headless:
-        options.add_argument('--headless')
+        #options.add_argument('--headless=new')
+        options.add_argument('--no-sandbox')
+        options.add_argument('--disable-dev-shm-usage')
     driver = webdriver.Chrome(options=options)
     return driver
 def stamp_to_int(stamp):
@@ -25,27 +27,32 @@ def stamp_to_int(stamp):
 
 def get_pull_data(driver, url):
     driver.get(url)
-    pull_button = WebDriverWait(driver, 40).until(
-        EC.element_to_be_clickable((
-            By.XPATH,
-            "//button[contains(@class,'size-full') and contains(@class,'rounded-l-sm') and contains(@class,'bg-stripes-muted') and .//*[name()='svg']]"
-        ))
+    driver.execute_script("""
+    document.cookie = "right-sidebar-open=true; path=/; max-age=3600";
+    location.reload();
+""")
+    data_box = WebDriverWait(driver, 15).until(
+        EC.visibility_of_element_located(
+            (By.XPATH,
+             "//div[contains(@class, 'pointer-events-auto') and contains(@class, 'absolute') and contains(@class, 'right-0') and contains(@class, 'z-10') and contains(@class, 'flex') and contains(@class, 'h-full')]"
+             )
+        )
     )
-    print(f"Pull button found")
-    pull_button.highlighted = True
-    pull_button.click()
-    data_box = driver.find_element(
-    By.CSS_SELECTOR,
-    "div.pointer-events-auto.absolute.right-0.isolate.z-10.flex.h-full.transition-transform.duration-200.ease-out.translate-x-0"
-)
-    value_box = data_box.find_element(By.XPATH, '//span[.//img[@alt="Coin"]]')
+    # The value of the pool
+    value_box = WebDriverWait(driver,15).until(
+        EC.visibility_of_element_located(
+            (By.XPATH, ".//span[.//img[@alt='Coin']]")
+        )
+    )
     pull_value = value_box.text
+    print(f"Raw pull value: {pull_value}")
     pull_value = pull_value.split()[0]
     print(f"Pull value: {pull_value}")
 
-    online_box = data_box.find_element(By.CLASS_NAME,"text-xs.font-normal.leading-none")
-    online_box = online_box.find_element(By.TAG_NAME,"number-flow-react")
-    online_value = online_box.text
+    online_match = re.search(r'(\d+)\s*online', data_box.text, re.IGNORECASE)
+    if not online_match:
+        raise ValueError("Could not parse online count from sidebar")
+    online_value = online_match.group(1)
     print(f"Online users: {online_value}")
 
     print("Pull value = ", float(pull_value)/float(online_value))
