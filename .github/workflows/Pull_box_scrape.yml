@@ -1,6 +1,8 @@
 name: Raffle Scraper
 
 on:
+  repository_dispatch:
+    types: [vercel-cron]
   workflow_dispatch:
 
 jobs:
@@ -9,7 +11,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
       - name: Check if minute is in valid range
         run: |
@@ -21,7 +23,7 @@ jobs:
           echo "Current minute ($MINUTE) is in valid range. Proceeding..."
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
           python-version: 3.11
 

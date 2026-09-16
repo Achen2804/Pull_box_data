@@ -56,13 +56,11 @@ def get_pull_data(driver, url):
     print(f"Online users: {online_value}")
 
     print("Pull value = ", float(pull_value)/float(online_value))
-    minute = datetime.now().minute
-    print("Timestamp: ", minute)
-    if (not (20 <= minute < 30) and not (50 <= minute <= 59)):
-        raise ValueError("Scrapped too early, will skip.")
-    path = "data/data.json"
+    
+    path = "_data/data.json"
     try:
         if os.path.exists(path):
+            print("Data file exists, loading existing data.")
             with open(path, "r") as f:
                 items = json.load(f)
                 if not isinstance(items, list):
@@ -73,12 +71,15 @@ def get_pull_data(driver, url):
             'pull_value': pull_value,
             'online_value': online_value,
             'ratio': float(pull_value)/float(online_value),
-            'timestamp': datetime.now().isoformat()
+            'timestamp': datetime.now().isoformat()+'Z'
         })
         with open(path, "w") as f:
             json.dump(items, f, indent=4)
     except json.JSONDecodeError:
         print("Error decoding JSON from data file.")
         
-
+minute = datetime.now().minute
+print("Timestamp: ", minute)
+if (not (20 <= minute < 30) and not (50 <= minute <= 59)):
+    raise ValueError("Scrapped too early, will skip.")
 get_pull_data(initialize_driver(), "https://www.pullbox.gg/")
